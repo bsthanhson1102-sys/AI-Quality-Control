@@ -11,7 +11,6 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
-import sys
 
 PROMPT = """# AI-QC T09 — isolated fallback evaluation
 
@@ -133,6 +132,10 @@ def verify(bundle: Path) -> int:
         print(f"INVALID: cannot read evidence.json: {exc}")
         return 2
 
+    if not isinstance(evidence, dict):
+        print("INVALID: evidence.json root must be a JSON object")
+        return 2
+
     required_true = [
         "fresh_conversation_created",
         "human_attestation.attests_fresh_session_and_no_prior_context",
@@ -163,6 +166,13 @@ def verify(bundle: Path) -> int:
         "tools_not_provided", "network_disabled", "deterministic_access_denial"
     }:
         errors.append("source_access_mode must identify a controlled unavailable-access mode")
+
+    for key in ("github_connector_available", "web_or_browser_retrieval_available", "network_retrieval_available"):
+        if evidence.get(key) is True:
+            errors.append(f"{key} is true; hard source-isolation condition is not met")
+    for key in ("registry_access_result", "skill_access_result"):
+        if not isinstance(evidence.get(key), str) or not evidence[key].strip() or evidence[key] == "not_recorded":
+            errors.append(f"{key} must record the observed unavailable-access result")
 
     if prompt_path.is_file():
         actual_prompt_hash = sha256_file(prompt_path)
