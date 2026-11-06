@@ -58,11 +58,11 @@ for item in entries:
 
     metadata = frontmatter[1]
     for key in ("name", "version", "status"):
-        if not re.search(rf"(?m)^{key}:\\s*.+$", metadata):
+        if not re.search(rf"(?m)^{key}:\s*.+$", metadata):
             errors.append(f"{skill_id}: missing frontmatter field {key}")
 
     for key in ("name", "version", "status"):
-        match = re.search(rf"(?m)^{key}:\\s*(.+)$", metadata)
+        match = re.search(rf"(?m)^{key}:\s*(.+)$", metadata)
         if match:
             actual = match.group(1).strip()
             expected = skill_id if key == "name" else item.get(key)
