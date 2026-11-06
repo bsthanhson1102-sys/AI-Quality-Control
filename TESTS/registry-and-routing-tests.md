@@ -3,8 +3,10 @@
 ## Registry integrity
 - [ ] Every active registry entry points to an existing SKILL.md.
 - [ ] Every skill ID is unique and stable.
+- [ ] Registry version and status match each skill's frontmatter.
 - [ ] Triggers are clear and do not conflict without documented precedence.
 - [ ] Deprecated skills are not selected as primary skills unless migration is requested.
+- [ ] Run `python TOOLS/validate_registry.py`; require a PASS result.
 
 ## Routing scenarios
 - [ ] Social advertisement selects content-master.
