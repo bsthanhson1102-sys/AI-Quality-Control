@@ -180,7 +180,15 @@ Scores use the weights in CORE/quality-control.md. For compactness, the values b
 
 **Full regression suite result:** NOT COMPLETE. The nine-case suite must not be declared passed until T07–T09 have actual run records. T09 should be tested with a controlled unavailable-source fixture or in a runtime where access genuinely fails; do not pretend the live GitHub connection failed.
 
-## 6. Limitations
+## 6. Repository CI verification
+
+- GitHub Actions workflow: Validate AI-QC Registry.
+- Commit checked: 1b175f5b0cbb36a4412bf8dbc36bdadc6a6e8b30.
+- Workflow run: 42177079033, event push, status completed, conclusion success.
+- Run URL: https://github.com/bsthanhson1102-sys/AI-Quality-Control/actions/runs/42177079033
+- This CI run confirms the repository Registry validator completed successfully for that commit. It does not replace the six manual specialist smoke tests and does not certify other ChatGPT/Codex runtimes.
+
+## 7. Limitations
 
 - This report records smoke tests performed in one ChatGPT conversation. It is not a cross-session or Codex runtime certification.
 - The image test verified the production prompt and visual QA rules; no rendered image was created.
