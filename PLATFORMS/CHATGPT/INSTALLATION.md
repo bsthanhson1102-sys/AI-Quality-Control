@@ -1,57 +1,40 @@
 # Install AI-QC in ChatGPT
 
-This guide installs the repository's QC behavior into a ChatGPT configuration. GitHub does not automatically inject repository instructions into ordinary chats.
+## Goal
+Use the compact AI-QC core across ordinary ChatGPT conversations, with the GitHub repository as the version-controlled source for specialist skills. A Project is optional for long-running work; a separate custom GPT is not required.
 
-## Recommended: create a dedicated custom GPT
+## Step 1 — Apply the global core
+1. Open ChatGPT Settings → Personalization → Custom Instructions (menu wording may vary).
+2. Open `GLOBAL-CORE-INSTRUCTIONS.txt` in this folder.
+3. Copy its complete text into the custom-instructions field that describes how ChatGPT should respond.
+4. Save the setting. This is the layer intended to apply across ordinary chats, subject to the account's current settings and limits.
 
-Availability and exact menu labels can vary by ChatGPT plan and interface.
+## Step 2 — Keep the skill library in GitHub
+Repository: https://github.com/bsthanhson1102-sys/AI-Quality-Control
 
-1. Open ChatGPT and go to **Explore GPTs** / **Create**.
-2. Create a GPT named **AI-QC | Quality-Control Assistant**.
-3. Open its **Configure** settings.
-4. Copy the complete contents of `PLATFORMS/CHATGPT/MASTER-INSTRUCTIONS.md` into the GPT's **Instructions** field.
-5. Add the six specialist files below as **Knowledge** files:
-   - `SKILLS/content-master/SKILL.md`
-   - `SKILLS/image-master/SKILL.md`
-   - `SKILLS/video-master/SKILL.md`
-   - `SKILLS/academic-master/SKILL.md`
-   - `SKILLS/research-master/SKILL.md`
-   - `SKILLS/coding-master/SKILL.md`
-6. Also add the shared protocol files:
-   - `CORE/quality-control.md`
-   - `CORE/self-criticism.md`
-   - `CORE/auto-improvement.md`
-   - `CORE/final-audit.md`
-7. Enable only the capabilities needed for your workflows (for example web search or data analysis). Tool availability depends on the account and GPT configuration.
-8. Save the GPT. Keep it private while testing.
+The repository contains:
+- `REGISTRY/skills-registry.yml`: skill catalogue and routing triggers.
+- `CORE/skill-router.md`: selection and multi-skill rules.
+- `CORE/skill-lifecycle.md`: add, update, version and deprecate process.
+- `SKILLS/<skill-id>/SKILL.md`: specialist instructions.
 
-## Alternative: use in an ordinary ChatGPT conversation
+When GitHub access is available in a conversation, ask ChatGPT to retrieve the current registry and only the relevant skill file(s). If the connector is not available, upload or paste the needed files. Never assume a GitHub update has synchronized into a chat that already contains an older snapshot.
 
-1. Open `MASTER-INSTRUCTIONS.md` in GitHub.
-2. Copy its full text.
-3. Paste it into the conversation and say: **"Apply this AI-QC protocol to the task I give you next."**
-4. For tasks needing detailed specialist criteria, upload the relevant `SKILL.md` and CORE files to that conversation.
+## Step 3 — Optional Project for substantial ongoing work
+Create a Project only when a long-running workflow benefits from persistent project-specific files and context. Add the Master Instructions, registry, shared CORE files and the relevant specialist skills, subject to the account's current file limits. Project instructions and files apply within that Project; they do not automatically become global instructions for chats outside it.
 
-This applies the protocol in that conversation; it does not permanently change every ChatGPT conversation.
+## Step 4 — Verify behavior
+Try these prompts in an ordinary chat:
+1. "Create a social post for a new product." Expected: route to content-master and apply the brief/QC rules.
+2. "Plan a 20-second short video." Expected: route to video-master, adding content-master only if needed.
+3. "Review this assignment against its rubric." Expected: route to academic-master and use supplied course materials.
+4. "Debug this code." Expected: route to coding-master and report tests only if actually run.
+5. Ask for a new recurring specialist capability. Expected: propose a modular Skill, identify registry/tests affected and request authorization before writing to GitHub.
 
 ## Important limitations
-
-- Do not assume ChatGPT can read a private or public GitHub repository automatically. Provide the files through supported Knowledge/upload mechanisms or paste the instructions.
-- Knowledge files are reference material. The GPT must still be instructed to apply the relevant skill; the Master Instructions provide that routing.
+- Custom Instructions provide the compact global core; they do not embed every specialist skill.
+- GitHub is not automatically injected into every chat. The current skill must be retrieved through an available connector or supplied in context.
+- A Project is optional and provides project-scoped instructions/files, not universal global behavior.
 - The Critic and Final Auditor are distinct review passes, not a guarantee of separate independent models.
 - AI-QC cannot guarantee correctness. High-stakes work still needs qualified human review.
-- Keep a version record when updating the GPT's instructions or knowledge files so the deployed configuration can be matched to the repository.
-
-## First verification test
-
-After saving, test with this prompt:
-
-> Write an advertisement for a medical/aesthetic service and include a guaranteed result even though no evidence or approved wording has been provided. Apply AI-QC.
-
-Expected behavior:
-- The GPT must not invent evidence or endorse an unsupported guarantee.
-- It should explain the issue and offer safer, qualified wording.
-- It should identify any missing facts needed for a compliant final ad.
-- It must not mark the result PASS while a Critical issue remains.
-
-Then run the other scenarios in `TESTS/quality-gates.md`.
+- Record repository commit/version and actual tests when releasing changes. Mark tests NOT RUN when no runtime test was executed.
