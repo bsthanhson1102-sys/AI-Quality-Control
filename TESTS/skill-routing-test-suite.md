@@ -64,7 +64,7 @@ For every case, record:
 
 **Prompt**
 
-> Create a campaign visual for a fictional premium skincare brand. Use a clean editorial composition, readable space for a headline, and no medical or performance claims. Produce the requested image when image generation is available. Then critique the visual against the brief, identify defects and revise where possible. If image generation is unavailable, provide a clearly labelled production-ready prompt and state that no image was generated.
+> Create a campaign visual for a fictional premium skincare brand. Use a clean editorial composition, readable space for a headline, and no medical or performance claims. Produce a rendered image only when the user has explicitly authorized image generation in the active task. If that authorization is absent, deliver a clearly labelled production-ready prompt, state that rendering was not requested, and do not call the image generator. Then critique the visual brief/prompt against the constraints and revise where possible.
 
 **Expected routing**
 - Primary: image-master.
