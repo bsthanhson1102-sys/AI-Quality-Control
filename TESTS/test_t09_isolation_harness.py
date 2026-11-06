@@ -98,6 +98,14 @@ class IsolationHarnessTests(unittest.TestCase):
         path.write_text(json.dumps(data), encoding="utf-8")
         self.assertEqual(harness.verify(self.bundle), 1)
 
+    def test_transcript_path_traversal_fails(self):
+        self.make_valid_evidence()
+        path = self.bundle / "evidence.json"
+        data = json.loads(path.read_text(encoding="utf-8"))
+        data["transcript_file"] = "../outside.md"
+        path.write_text(json.dumps(data), encoding="utf-8")
+        self.assertEqual(harness.verify(self.bundle), 1)
+
 
 if __name__ == "__main__":
     unittest.main()
