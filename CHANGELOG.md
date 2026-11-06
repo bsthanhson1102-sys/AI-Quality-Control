@@ -19,3 +19,9 @@
 - The coding smoke test completed 8/8 unit tests after Critic-driven fixes.
 - GitHub Actions Registry validation completed successfully on the smoke-test report commit (run 42177079033).
 - Cross-skill, unmatched-task and repository-access-failure scenarios remain NOT RUN; the complete nine-case regression suite is therefore NOT COMPLETE.
+
+
+## 2026-11-06 — Global ChatGPT instruction refresh
+
+- Updated GLOBAL-CORE-INSTRUCTIONS.txt to include the process/artifact split, canonical scoring rule, evidence traceability and consistent decision states while keeping the file at 1,492 characters.
+- Updated the ChatGPT installation guide to require re-copying the global file after repository changes; GitHub does not synchronize saved Custom Instructions automatically.
