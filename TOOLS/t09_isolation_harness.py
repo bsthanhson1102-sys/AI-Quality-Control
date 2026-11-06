@@ -171,11 +171,16 @@ def verify(bundle: Path) -> int:
     else:
         errors.append("prompt.md is missing")
 
-    transcript = bundle / evidence.get("transcript_file", transcript_name)
-    if not transcript.is_file():
-        errors.append(f"transcript file is missing: {transcript.name}")
-    elif evidence.get("transcript_sha256") != sha256_file(transcript):
-        errors.append("transcript_sha256 does not match transcript file")
+    transcript = (bundle / evidence.get("transcript_file", transcript_name)).resolve()
+    try:
+        transcript.relative_to(bundle.resolve())
+    except ValueError:
+        errors.append("transcript path escapes bundle")
+    else:
+        if not transcript.is_file():
+            errors.append(f"transcript file is missing: {transcript.name}")
+        elif evidence.get("transcript_sha256") != sha256_file(transcript):
+            errors.append("transcript_sha256 does not match transcript file")
 
     artifacts = evidence.get("artifact_files")
     if not isinstance(artifacts, list) or not artifacts:
