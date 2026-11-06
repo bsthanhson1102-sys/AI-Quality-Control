@@ -39,7 +39,7 @@ Do not combine these into one ambiguous score. Do not score an artifact that was
 - SKILLS/: six modular specialist skills (Content, Image, Video, Academic, Research and Coding).
 - PLATFORMS/CHATGPT/: global core instructions, master instructions and installation guidance.
 - PLATFORMS/CODEX/: deployment guidance for Codex-compatible agent environments.
-- TESTS/: quality gates, registry/routing checks and the nine-case skill routing/execution regression suite.
+- TESTS/: quality gates, registry/routing checks and the nine-case skill routing/execution regression suite. TESTS/reports/: dated records of actual test runs and their evidence.
 - TOOLS/validate_registry.py: standard-library validator for registry paths and skill metadata.
 - .github/workflows/validate-ai-qc.yml: runs registry validation on pushes and pull requests to main.
 
