@@ -8,6 +8,7 @@ Use the compact AI-QC core across ordinary ChatGPT conversations, with the GitHu
 2. Open `GLOBAL-CORE-INSTRUCTIONS.txt` in this folder.
 3. Copy its complete text into the custom-instructions field that describes how ChatGPT should respond.
 4. Save the setting. This is the layer intended to apply across ordinary chats, subject to the account's current settings and limits.
+5. After GLOBAL-CORE-INSTRUCTIONS.txt changes in GitHub, replace the old Custom Instructions text with the complete current file and save again. GitHub updates do not sync into an already-saved Custom Instructions field.
 
 ## Step 2 — Keep the skill library in GitHub
 Repository: https://github.com/bsthanhson1102-sys/AI-Quality-Control
@@ -34,6 +35,7 @@ Try these prompts in an ordinary chat:
 ## Important limitations
 - Custom Instructions provide the compact global core; they do not embed every specialist skill.
 - GitHub is not automatically injected into every chat. The current skill must be retrieved through an available connector or supplied in context.
+- The text saved in Custom Instructions is a snapshot. Re-copy GLOBAL-CORE-INSTRUCTIONS.txt after a core update; updating the repository alone does not change your saved ChatGPT settings.
 - A Project is optional and provides project-scoped instructions/files, not universal global behavior.
 - The Critic and Final Auditor are distinct review passes, not a guarantee of separate independent models.
 - AI-QC cannot guarantee correctness. High-stakes work still needs qualified human review.
