@@ -106,6 +106,18 @@ class IsolationHarnessTests(unittest.TestCase):
         path.write_text(json.dumps(data), encoding="utf-8")
         self.assertEqual(harness.verify(self.bundle), 1)
 
+    def test_retrieval_still_available_fails_isolation(self):
+        self.make_valid_evidence()
+        path = self.bundle / "evidence.json"
+        data = json.loads(path.read_text(encoding="utf-8"))
+        data["web_or_browser_retrieval_available"] = True
+        path.write_text(json.dumps(data), encoding="utf-8")
+        self.assertEqual(harness.verify(self.bundle), 1)
+
+    def test_non_object_evidence_is_rejected(self):
+        (self.bundle / "evidence.json").write_text("[]", encoding="utf-8")
+        self.assertEqual(harness.verify(self.bundle), 2)
+
 
 if __name__ == "__main__":
     unittest.main()
