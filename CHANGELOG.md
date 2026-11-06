@@ -11,3 +11,11 @@
 - Updated Registry/routing acceptance checks, ChatGPT master instructions and repository documentation to use the same QC rules.
 - These changes define and document the tests; they do not claim that all nine scenarios have been executed in a live ChatGPT/Codex runtime.
 - Runtime-level Skill execution and the GitHub Actions run remain subject to actual verification in their target environments.
+
+
+## 2026-11-06 — Specialist smoke test execution
+
+- Recorded six specialist smoke tests (Content, Image prompt design, Video storyboard, Academic, Research and Coding) in TESTS/reports/2026-11-06-specialist-smoke-test.md; all six execution cases passed in this conversation/runtime.
+- The coding smoke test completed 8/8 unit tests after Critic-driven fixes.
+- GitHub Actions Registry validation completed successfully on the smoke-test report commit (run 42177079033).
+- Cross-skill, unmatched-task and repository-access-failure scenarios remain NOT RUN; the complete nine-case regression suite is therefore NOT COMPLETE.
