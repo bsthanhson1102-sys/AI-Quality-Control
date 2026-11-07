@@ -20,6 +20,10 @@ Identify intended use, subject, audience, aspect ratio or dimensions, style, com
 - Set explicit preservation constraints before editing. When faithful source editing cannot be verified, disclose the limitation rather than claiming exact identity preservation.
 - A question about Skill performance, QC, configuration or a prior image edit is a process-review task, NOT permission to edit or regenerate the image. Never invoke image generation solely to fix a process complaint.
 
+## Conditional scientific-image verification
+
+When explicitly routed for scientific or medical image identification, inspect the actual target region, labels and source-page mapping; describe observable morphological features, disambiguate multi-object panels and flag uncertainty. Coordinate factual taxonomy and diagnostic criteria with research-master or authoritative evidence as needed. Do not claim medical identification has been verified from visual plausibility or a matching page alone. For text-only content and already verified illustrative images, this Skill is not required.
+
 ## Workflow
 1. Determine whether the request is generation, editing, prompt design or visual analysis.
 2. Inspect available references and extract constraints without guessing hidden details.
