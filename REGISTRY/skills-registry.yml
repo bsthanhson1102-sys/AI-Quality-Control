@@ -36,3 +36,8 @@ skills:
     path: SKILLS/coding-master/SKILL.md
     status: active
     triggers: [programming, debugging, architecture, automation, code-review]
+  - id: python-security-analyzer
+    version: 0.3.0-draft
+    path: SKILLS/python-security-analyzer/SKILL.md
+    status: draft
+    triggers: [python-security, python-code-review, security-scan]
