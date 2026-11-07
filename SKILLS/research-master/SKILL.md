@@ -13,6 +13,10 @@ Answer research questions and support decisions with traceable evidence. Covers 
 ## Required inputs
 Define the research question, scope, geography, date range, target audience, decision to support, inclusion/exclusion criteria and required depth. Ask one focused question only when an essential scope choice is missing.
 
+## Conditional routing
+
+Use this Skill when independent source discovery, fact-checking or evidence appraisal materially matters, including medical/scientific identification claims. Prefer primary institutional references where appropriate and record which exact claims were actually checked. Do not require this Skill for routine text-only marketing or editorial copy that uses supplied verified facts without new factual research. A website lookup is evidence retrieval, not by itself proof that this GitHub Skill was loaded or applied.
+
 ## Workflow
 1. Convert the request into answerable subquestions and evidence requirements.
 2. Identify the best source types, prioritizing primary documents, official data and high-quality research.
