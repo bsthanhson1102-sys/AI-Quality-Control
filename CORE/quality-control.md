@@ -19,6 +19,29 @@ Before substantive domain work, classify the actual user intent and risk (Light 
 - Keep internal orchestration concise in the user-facing answer. Do not substitute progress announcements, QC scores or repeated confirmations for the requested deliverable.
 - When the user explicitly requests a persistent Skill change, update the authorized source of truth, read back the updated file and report its scope. Merely promising to 'remember' is not a verified persistent update.
 
+## Mandatory evidence gate and product-specific acceptance
+
+Before handover, create a compact internal evidence ledger linking each material requirement or answer to its source, inspection or executed test. For source-derived educational questions, the minimum per-item record is: item ID, source document and page/figure, exact target image or region, proposed answer, source answer or justified identification, verification method, and VERIFIED / DISPUTED / UNVERIFIED status. Do not infer a correct answer from an image filename or from a plausible visual resemblance alone. Multi-object images require a visible target marker or unambiguous crop. An answer key with any material UNVERIFIED or DISPUTED item cannot be approved as a definitive study key; revise, exclude or explicitly mark it provisional.
+
+Use product-specific acceptance checks in addition to the canonical CORE rubric, never instead of it:
+- **Image editing:** compare the rendered result to the supplied source for identity, pose, clothing, framing, lighting, geometry and requested changes; disclose when fidelity cannot be inspected.
+- **Code/software:** inspect actual code changes and run relevant tests, security and regression checks when tools are available; missing execution evidence cannot be reported as a test PASS.
+- **Academic/medical/educational content:** verify factual statements, calculations, image identifications, answer keys, cited pages and any safety-sensitive claims against accessible sources; do not silently replace course-specific answers with general knowledge.
+- **Video:** inspect rendered frames or output, temporal continuity, audio/text sync and export properties where available; do not claim to have watched an inaccessible video.
+- **Content/marketing:** verify facts, claims, audience fit, brand constraints, platform risks and the actual published or exported copy; do not invent results or guarantees.
+- **Research:** trace claims to accessible sources, inspect contradictory evidence and distinguish sourced findings from inference.
+- **Other domains:** define measurable product-specific checks before creating the deliverable.
+
+**Two separate acceptance gates are mandatory for substantial artifacts:**
+1. **Technical acceptance:** artifact exists, opens/parses, contains expected item/page counts and requested file format; verify using available tools.
+2. **Domain/content acceptance:** every material answer, claim, calculation, image target or safety-sensitive element has been checked using appropriate evidence and specialist criteria.
+
+Technical PASS alone never implies domain PASS. For each gate record PASS / NOT PASS / BLOCKED / NOT RUN, with specific evidence. If the domain gate cannot be completed, do not release an unqualified definitive answer key or assert overall PASS. Where useful, a clearly labeled provisional artifact may be provided with an explicit warning about unverified content.
+
+## Mandatory defect correction and release rule
+
+Critic must enumerate actionable Critical/Major findings before the release decision. Editor corrects the actual artifact, not merely the written QC report; Re-check tests each correction and relevant regressions; Final Auditor independently reviews the final version against the original request, the evidence ledger, the two acceptance gates and the unchanged canonical 25/20/15/15/10/10/5 rubric. Run no more than four creation/revision rounds including the initial artifact. Stop early on verified PASS or BLOCKED. If any Critical/Major remains, or mandatory evidence is absent, return NOT PASS or BLOCKED with the precise limitation; never silently waive it, inflate the score or label a draft final. These roles are distinct passes in one assistant, not independent external experts.
+
 ## Workflow
 
 1. **Intake:** understand goal, audience, context, inputs, output format, constraints and risk.
