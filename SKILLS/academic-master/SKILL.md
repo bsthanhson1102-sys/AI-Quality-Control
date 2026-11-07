@@ -34,6 +34,10 @@ For visual identification quizzes, especially medical/parasitology training:
 7. Do not publish a definitive answer key or claim academic QC PASS while any material question remains UNVERIFIED or DISPUTED. Correct, replace, omit or label the entire affected material as provisional, then re-check every changed item.
 8. Run Creator → Critic → Editor → Re-check → Final Auditor, at most four rounds including the first. Preserve the CORE weights and zero Critical/Major gate. State actual evidence and limits; do not claim independent verification unless another independent reviewer or tool was truly used.
 
+## Release Gate for academic and medical study materials
+
+Before describing a question bank, answer key or medical teaching PDF as approved, apply CORE's three Release Gate conditions: EVIDENCE COMPLETE, REGRESSION CLEAR and FINAL AUDIT APPROVED. A source-page or image-similarity match is a technical aid, not sufficient evidence of domain correctness. In particular, any CHECK_IMAGE, UNVERIFIED or DISPUTED question blocks an unqualified PASS. Record technical and domain gate results separately; verify each corrected question and recheck its answer mapping. If mandatory evidence is unavailable, report BLOCKED; if a known verification defect remains, report NOT PASS. A clearly marked provisional study draft may be handed over when safe, but never as a definitive answer key. Follow the four-round cap and unchanged CORE rubric.
+
 ## Quality criteria
 - All required sections are present and proportionate.
 - Claims have suitable support or are clearly identified as analysis.
@@ -56,5 +60,6 @@ Use the requested structure and file specifications. If a downloadable file is r
 Use research-master for literature search and evidence appraisal; coding-master for statistical scripts or data processing.
 
 ## Changelog
+- 2026-11-08: Applied CORE Release Gate to question banks and medical study materials; unverified image IDs block definitive approval (v1.0.0 retained).
 - 2026-11-08: Added per-image evidence ledger, ambiguous-figure handling, separate technical/domain gates and mandatory answer-key verification (v1.0.0 retained).
 - 1.0.0: Initial versioned release with rubric-first workflow, source integrity and clinical safeguards.
