@@ -34,16 +34,16 @@ Do not combine these into one ambiguous score. Do not score an artifact that was
 
 ## Repository map
 
-- CORE/: shared QC protocol, critique, improvement, final audit, skill router and lifecycle policy.
+- CORE/: shared QC protocol, critique, improvement, final audit, skill router, lifecycle policy and four-expert orchestration.
 - REGISTRY/skills-registry.yml: central catalogue of skill IDs, versions, paths, status and routing triggers.
 - SKILLS/: six modular specialist skills (Content, Image, Video, Academic, Research and Coding).
 - PLATFORMS/CHATGPT/: global core instructions, master instructions and installation guidance.
 - PLATFORMS/CODEX/: deployment guidance for Codex-compatible agent environments.
-- TESTS/: quality gates, registry/routing checks and the nine-case skill routing/execution regression suite. TESTS/reports/: dated records of actual test runs and their evidence.
+- TESTS/: quality gates, registry/routing checks, the nine-case skill routing/execution regression suite and multi-expert orchestration acceptance tests. TESTS/reports/: dated records of actual test runs and their evidence.
 - TOOLS/validate_registry.py: standard-library validator for registry paths and skill metadata.
 - .github/workflows/validate-ai-qc.yml: runs registry validation on pushes and pull requests to main.
 
-## Add or update a skill
+## Multi-expert execution\n\nFor substantial tasks, CORE/multi-expert-orchestration.md defines four differentiated expert perspectives, an independent Judge, a maximum four-round improvement loop and a final audit. The runtime must disclose whether these perspectives are separate models, isolated calls or single-model role-separated passes. TESTS/multi-expert-orchestration-tests.md defines the required acceptance tests; the specification itself is not proof of runtime execution.\n\n## Add or update a skill
 
 Follow CORE/skill-lifecycle.md. Add a new SKILLS/<skill-id>/SKILL.md, register it in REGISTRY/skills-registry.yml, add representative tests, and review routing/dependencies. For updates, fetch the latest file first, increment its version, append a changelog and verify dependent references. Prefer deprecation with a migration note over immediate deletion.
 
