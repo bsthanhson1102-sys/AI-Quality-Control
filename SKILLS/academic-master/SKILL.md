@@ -22,6 +22,18 @@ Identify assignment prompt, rubric, course/lecture files, subject, required sect
 6. Audit structure, completeness, logic, methods, calculations, citations, originality and formatting.
 7. Revise and verify every required section and file-format constraint.
 
+## Image-based examination and answer-key verification gate
+
+For visual identification quizzes, especially medical/parasitology training:
+1. Inspect the actual source page image, including any caption, label, answer key and nearby context. Do not rely on PDF extracted text alone when the evidence is visual.
+2. Build a per-question traceability ledger: question number; source filename/page/figure; precise target region or crop; proposed identification; answer stated by the course material (if present); verification status (VERIFIED / DISPUTED / UNVERIFIED); and a short diagnostic morphology cue.
+3. If one figure contains multiple organisms or stages, crop or mark exactly which specimen is being asked about; otherwise rewrite or omit the ambiguous question.
+4. Keep supplied course answers separate from independent expert interpretation. Where they disagree, flag the discrepancy and source; never silently overwrite the source.
+5. Distinguish morphologically similar eggs, cysts, trophozoites and blood stages using the visible distinguishing features. When the image is inadequate, mark UNVERIFIED rather than guessing.
+6. Check question count, numbering, answer mapping, source-page references, legibility and PDF openability as **technical acceptance**. Separately check identification accuracy, source traceability, target ambiguity and medical safety as **domain acceptance**.
+7. Do not publish a definitive answer key or claim academic QC PASS while any material question remains UNVERIFIED or DISPUTED. Correct, replace, omit or label the entire affected material as provisional, then re-check every changed item.
+8. Run Creator → Critic → Editor → Re-check → Final Auditor, at most four rounds including the first. Preserve the CORE weights and zero Critical/Major gate. State actual evidence and limits; do not claim independent verification unless another independent reviewer or tool was truly used.
+
 ## Quality criteria
 - All required sections are present and proportionate.
 - Claims have suitable support or are clearly identified as analysis.
@@ -44,4 +56,5 @@ Use the requested structure and file specifications. If a downloadable file is r
 Use research-master for literature search and evidence appraisal; coding-master for statistical scripts or data processing.
 
 ## Changelog
+- 2026-11-08: Added per-image evidence ledger, ambiguous-figure handling, separate technical/domain gates and mandatory answer-key verification (v1.0.0 retained).
 - 1.0.0: Initial versioned release with rubric-first workflow, source integrity and clinical safeguards.
