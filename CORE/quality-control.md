@@ -42,6 +42,28 @@ Technical PASS alone never implies domain PASS. For each gate record PASS / NOT 
 
 Critic must enumerate actionable Critical/Major findings before the release decision. Editor corrects the actual artifact, not merely the written QC report; Re-check tests each correction and relevant regressions; Final Auditor independently reviews the final version against the original request, the evidence ledger, the two acceptance gates and the unchanged canonical 25/20/15/15/10/10/5 rubric. Run no more than four creation/revision rounds including the initial artifact. Stop early on verified PASS or BLOCKED. If any Critical/Major remains, or mandatory evidence is absent, return NOT PASS or BLOCKED with the precise limitation; never silently waive it, inflate the score or label a draft final. These roles are distinct passes in one assistant, not independent external experts.
 
+## Release Gate — mandatory final decision
+
+The Release Gate is the last decision before presenting an artifact as final or approved. It is a decision rule, not a claim that an independent model or external reviewer has checked the work. It applies to substantial outputs; Light tasks use an appropriately brief check. Keep the canonical seven criterion weights and the 90/100 threshold unchanged.
+
+**Three required release conditions:**
+1. **EVIDENCE COMPLETE:** Every mandatory claim, answer, image target, source mapping and safety-sensitive assertion has a traceable verification record. Any material UNVERIFIED or DISPUTED item means this condition fails. Do not treat an automated similarity score or a source-page match as independent domain verification.
+2. **REGRESSION CLEAR:** No unresolved Critical or Major findings; each corrected defect has an explicit re-check result; no relevant new regression is observed. Record what was tested and what was not.
+3. **FINAL AUDIT APPROVED:** A separate final review pass confirms the original brief, evidence ledger, technical acceptance, domain/content acceptance, the canonical seven-category score (>=90/100 when applicable), the iteration cap and all mandatory constraints. The final pass cannot approve missing evidence by assumption.
+
+**Decision algorithm (apply in this order):**
+- If a required source, tool, approval or input is unavailable and prevents responsible verification: BLOCKED, with the missing prerequisite named.
+- Otherwise, if a mandatory condition fails, any Critical/Major remains, any required gate is NOT PASS/NOT RUN, or score is below 90: NOT PASS. Report precise findings and whether a clearly labeled provisional artifact is safe to share.
+- Otherwise, when all conditions pass and only nonblocking Minor/enhancements remain: PASS WITH NOTES.
+- Otherwise: PASS.
+- A completed Final Audit is not equivalent to an approved artifact. Never report PASS for a task that merely has a complete PDF, correct page count, matching filenames, or an automated match to source labels.
+
+**Evidence record for Full QC:** Task/brief ID; source/ref and version where available; artifact path/version; technical gate PASS/NOT PASS/BLOCKED/NOT RUN plus evidence; domain gate and per-item verification statuses; Critical/Major findings with resolution; regression tests actually executed and results; CORE score by 25/20/15/15/10/10/5; final audit execution status; artifact decision; and unresolved limitations. Do not invent evidence or imply a test was executed when it was not.
+
+**Provisional handover:** A safe draft may be shared as PROVISIONAL — NOT APPROVED with unresolved issues and verification needs stated prominently. This is not a PASS, and must not be presented as a definitive medical answer key or a production-ready system.
+
+**Regression fixture for release-gate changes:** Check at least (a) a clean artifact with fully verified evidence and score >=90 -> PASS; (b) a high-scoring artifact with one unresolved Major -> NOT PASS; (c) a medical image-answer set with one CHECK_IMAGE/UNVERIFIED item -> NOT PASS; (d) unavailable mandatory source -> BLOCKED; (e) technical PASS but domain NOT RUN -> NOT PASS; (f) four rounds with unresolved Major -> NOT PASS and stop. Record whether each fixture was a simulated rule check or an executed end-to-end artifact test. Do not describe a simulation as proof of real-world accuracy.
+
 ## Workflow
 
 1. **Intake:** understand goal, audience, context, inputs, output format, constraints and risk.
