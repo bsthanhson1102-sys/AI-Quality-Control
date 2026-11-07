@@ -15,7 +15,7 @@ skills:
     version: 1.0.0
     path: SKILLS/image-master/SKILL.md
     status: active
-    triggers: [image-generation, image-editing, visual-design, image-critique]
+    triggers: [image-generation, image-editing, visual-design, image-critique, scientific-image-analysis, medical-image-review, visual-identification]
   - id: video-master
     version: 1.0.0
     path: SKILLS/video-master/SKILL.md
@@ -30,7 +30,7 @@ skills:
     version: 1.0.0
     path: SKILLS/research-master/SKILL.md
     status: active
-    triggers: [research, comparisons, evidence-review, fact-checking, current-information]
+    triggers: [research, comparisons, evidence-review, fact-checking, current-information, medical-fact-verification]
   - id: coding-master
     version: 1.0.0
     path: SKILLS/coding-master/SKILL.md
