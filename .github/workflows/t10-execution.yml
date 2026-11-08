@@ -9,6 +9,7 @@ on:
     paths:
       - 'TESTS/t10/**'
       - '.github/workflows/t10-execution.yml'
+      - 'RELEASES/**'
   workflow_dispatch:
 permissions:
   contents: read
