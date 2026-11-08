@@ -1,7 +1,7 @@
 ---
 name: content-master
 description: Create and optimize social content, ads, hooks, scripts, captions, SEO and campaigns; independently critique and improve for audience fit, clarity, originality, evidence and platform compliance.
-version: 1.3.2
+version: 1.3.3
 status: active
 ---
 
@@ -129,6 +129,18 @@ This pattern is an example of specificity and payoff, **not** a mandatory templa
 
 **Regression acceptance:** Compare against the observed fixture above. A better revision should preserve its specific hook and low-friction keyword CTA while adding a concrete, understandable connection between factors; a rewrite that merely adds more questions, more anatomy jargon or a longer generic consultation paragraph does not count as an improvement. This is a manual editorial fixture, not proof of automated cross-tab loading or measured conversion lift.
 
+## Cross-tab QC evidence and version reconciliation (v1.3.3)
+
+**Observed audit fixture:** When asked after delivery "đã sử dụng kỹ năng và skill gì ... đã qua kiểm chứng chưa?", a separate tab reported it had loaded Registry 1.4.1 / content-master 1.3.0 but could not evidence Creator -> Critic -> Editor -> Re-check -> Final Auditor for its earlier chin post. At the time of subsequent inspection, current main was Registry 1.4.3 / content-master 1.3.2. This is a missing pre-delivery evidence finding and a version-snapshot discrepancy, **not** proof that the other tab lied or failed to load a Skill: the tab might have fetched an earlier snapshot.
+
+**Before drafting substantive marketing:** If live source access exists, retrieve Registry, the matching active content-master, and CORE; record the actual source version and blob SHA. If a source is unavailable, use explicitly labeled fallback and never claim the latest Skill was loaded. A source read is LOADED, not proof of APPLIED or VERIFIED.
+
+**Pre-delivery minimum evidence record:** Complete the already-required role-separated passes before the final response. Preserve a concise task-scoped audit trace (brief, selected hook, actual initial draft, concrete Critic finding IDs and severities, actual Editor changes, Re-check outcomes, final CORE seven-category decision). This trace can be stored in a real artifact or execution log when supported. Do not claim that a durable trace exists merely because internal reasoning occurred. If the task has no substantive defect, Critic may record 'no material findings' with specific evidence; Editor records 'no change required' rather than inventing a revision.
+
+**When asked retrospectively about QC:** Report (a) which source versions were actually read and when known, (b) which steps have *observable* evidence, (c) which were not recorded or cannot be verified, and (d) whether an explicit CORE release decision is supported. Never fabricate a retrospective audit trail or turn absence of evidence into a PASS. If the current Registry differs from the reported loaded version, call it a *snapshot difference*, not automatically a stale-cache bug; compare timestamps/reads before diagnosing. Do not silently rescore an earlier artifact as though that score existed at original delivery.
+
+**Remediation:** If evidence is missing, mark original release status UNVERIFIED/NOT PASS as applicable; for a new requested revision, run the full process and preserve evidence. The fix is improving execution and observability, not repeatedly appending stronger prose rules. This Skill cannot guarantee that another chat will execute the gate without host-level routing and trace support. Preserve the CORE weights, >=90 threshold, zero unresolved Critical/Major and max four rounds.
+
 ## Conditional medical-aesthetics social content optimization
 
 Activate this checklist when the deliverable promotes or explains aesthetic medicine, cosmetic procedures, body/face enhancement or related consultations on Facebook, Instagram, TikTok or other platforms. Apply it **before** final delivery, as part of the mandatory editorial gate; do not burden unrelated content.
@@ -195,6 +207,8 @@ If code execution is actually available, `python -m unittest -v TESTS/t10/test_c
 **Second T10 negative fixture:** A post that opens with 'Một dáng mũi đẹp trên ảnh chưa chắc...' and then asks three preference questions without providing a concrete answer is still a Major value/payoff failure. Treat a series of questions as a prompt for insight, not a substitute for insight. The deterministic screen flags three or more questions with fewer than two concrete service/clinical details as `QUESTIONNAIRE_WITHOUT_PAYOFF`; this is only a heuristic and may false-positive, so manual editorial review is required.
 
 ## Changelog
+- 1.3.3: Added cross-tab QC evidence and version-snapshot reconciliation, with retrospective audit fixture.
+
 - 1.3.2: Added conditional example-before-list editorial check and preserved strengths from observed chin-content fixture.
 
 - 1.3.1: Added observed chin-content regression, distinctive payoff requirement, narrative/emotion Critic check, and positive/negative worked examples.
