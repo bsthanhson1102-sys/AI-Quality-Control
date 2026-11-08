@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[3]
 TARGET = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else ROOT
 REG = ROOT / "REGISTRY/skills-registry.yml"
 SNAP = ROOT / "PLATFORMS/CODEX/references/registry-snapshot.yml"
-EXPECTED = "ef826a043f3ab99cfd8da67078490835789788e5"
+EXPECTED = "52391e03c29cd4f22935824716f57a8b5a7be2df"
 
 def git_blob_sha(data):
     return hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()
