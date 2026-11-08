@@ -1,7 +1,7 @@
 ---
 name: content-master
 description: Create and optimize social content, ads, hooks, scripts, captions, SEO and campaigns; independently critique and improve for audience fit, clarity, originality, evidence and platform compliance.
-version: 1.3.4
+version: 1.3.5
 status: active
 ---
 
@@ -141,6 +141,16 @@ This pattern is an example of specificity and payoff, **not** a mandatory templa
 
 **Remediation:** If evidence is missing, mark original release status UNVERIFIED/NOT PASS as applicable; for a new requested revision, run the full process and preserve evidence. The fix is improving execution and observability, not repeatedly appending stronger prose rules. This Skill cannot guarantee that another chat will execute the gate without host-level routing and trace support. Preserve the CORE weights, >=90 threshold, zero unresolved Critical/Major and max four rounds.
 
+## Seven-day fanpage strategy acceptance fixture (v1.3.5)
+
+**Observed regression fixture:** A seven-day medical-aesthetics fanpage plan supplies seven reasonable post ideas, formats and purposes, but is mainly a posting calendar rather than a page-growth plan. It reports inability to retrieve Registry/CORE/content-master; this is honest fallback, not evidence of a successful Skill load. Never infer an actual network outage or a host routing defect without examining that tab's tool access and trace.
+
+**Conditional gate for requests to build/grow a fanpage over a week:** Before finalizing, distinguish a simple '7 post ideas' brief from a 'build/develop the page for one week' brief. For the latter, deliver a compact actionable growth plan, not only seven topics. Include: (1) a stated primary objective and audience hypothesis, with assumptions labeled; (2) profile/page readiness or pinned-post action where relevant; (3) varied daily content with specific audience payoff and nonduplicative themes, format and CTA; (4) distribution/community engagement actions feasible without paid budget; (5) a privacy-safe, truthful inquiry-to-consultation path; (6) a small measurement plan using real observable signals such as reach, saves, qualified inbox inquiries and appointments, with no fabricated targets or outcomes; and (7) an end-of-week decision rule to iterate based on measured results. Adapt the level of detail to user intent and available inputs. Do not force this checklist onto a request for captions only.
+
+**Critic rejection check:** A table of seven generic topics with a 'goal' column but no distribution, audience, conversion flow or measurable review is an incomplete fanpage-growth deliverable, even if medically cautious. Ask Editor to add the missing strategic components without bloating or inventing service claims. Distinguish professional education from service promotion, avoid fabricated testimonials, unsupported before/after promises, and do not assume an active clinic location or clinician availability without confirmation.
+
+**Regression contrast:** Weak: 'Day 1 three consultation questions; Day 2 chin ratios; Day 3 poll; ... Day 7 livestream; review engagement.' Better: 'Audience hypothesis; page intro/pinned FAQ; seven distinct posts each with takeaway and action; a daily reply/community workflow; inquiry intake and privacy safeguards; a Sunday check of qualified messages, saves, shares and consultations; next-week topic decision.' This is a manual editorial fixture, not proof of real platform performance or an executed cross-tab QC gate.
+
 ## Conditional medical-aesthetics social content optimization
 
 Activate this checklist when the deliverable promotes or explains aesthetic medicine, cosmetic procedures, body/face enhancement or related consultations on Facebook, Instagram, TikTok or other platforms. Apply it **before** final delivery, as part of the mandatory editorial gate; do not burden unrelated content.
@@ -207,6 +217,8 @@ If code execution is actually available, `python -m unittest -v TESTS/t10/test_c
 **Second T10 negative fixture:** A post that opens with 'Một dáng mũi đẹp trên ảnh chưa chắc...' and then asks three preference questions without providing a concrete answer is still a Major value/payoff failure. Treat a series of questions as a prompt for insight, not a substitute for insight. The deterministic screen flags three or more questions with fewer than two concrete service/clinical details as `QUESTIONNAIRE_WITHOUT_PAYOFF`; this is only a heuristic and may false-positive, so manual editorial review is required.
 
 ## Changelog
+- 1.3.5: Added conditional seven-day fanpage growth-plan acceptance fixture, distinguishing a strategy from a posting calendar.
+
 - 1.3.4: Reconciled legacy two-hook references with the three-angle marketing standard; preserved Light-task exception and unchanged CORE gates.
 
 - 1.3.3: Added cross-tab QC evidence and version-snapshot reconciliation, with retrospective audit fixture.
