@@ -1,7 +1,7 @@
 ---
 name: content-master
 description: Create and optimize social content, ads, hooks, scripts, captions, SEO and campaigns; independently critique and improve for audience fit, clarity, originality, evidence and platform compliance.
-version: 1.1.0
+version: 1.2.0
 status: active
 ---
 
@@ -127,7 +127,17 @@ This gate applies whenever this specialist Skill is actually loaded; it does not
 
 **Domain acceptance (content):** The final text must deliver a specific, truthful payoff for its opening, a developed audience-relevant insight (not only a three-item checklist), an appropriate provider/service value proposition without invented differentiators, and a CTA connected to the body. In service marketing, an education-only list plus generic inbox CTA is a **Major** goal-fit failure. Check claims and medical/platform risk separately. Show the exact passage improved for each Major; if unchanged, keep it UNRESOLVED and block PASS.
 
+## T10 negative-control and calibration rule
+
+For a substantial service-marketing deliverable, **do not infer PASS from having a hook, a body, a CTA and cautious claims**. Before scoring, compare the actual final text to the failed T10 rhinoplasty fixture in `TESTS/t10/test_content_gate.py`. A near-paraphrase of the failed generic opening + general harmony advice + clinic consultation + inbox CTA is a **Major** originality/payoff and goal-fit failure, even when the text is safe. Specifically identify what NEW actionable insight or credible service-specific decision factor the final copy gives the reader; without it, keep the Major open. Lack of verified provider differentiators must not be filled with invented ones; the value may be a useful, specific decision framework instead.
+
+If code execution is actually available, `python -m unittest -v TESTS/t10/test_content_gate.py` (run from `TESTS/t10` as working directory) and `python TESTS/t10/content_gate.py <draft-file>` provide **limited deterministic negative controls**, not a semantic quality score or a release authorization. `REVIEW_REQUIRED` means proceed to editorial and CORE audit; it NEVER means PASS. If code was not run, say NOT RUN. Do not claim this screening script automatically executes in ordinary ChatGPT chats.
+
+**Calibration requirement:** A final artifact matching a known failed fixture must never be given 90+ solely because its language is clean and medical claims are cautious. Re-evaluate the goal-fit, depth and practical-value CORE dimensions and cite the concrete improvement. No fixed formula can guarantee compelling marketing copy; reviewer judgment remains necessary.
+
 ## Changelog
+- 1.2.0: Added T10 negative-control calibration, explicit anti-template rejection and optional deterministic screening.
+
 - 1.1.0: Added tiered local QC gate, evidence-based Major resolution, reviewer-mode disclosure and domain acceptance.
 
 - 1.0.0: Initial versioned release with defined scope, workflow, critique and evidence safeguards.
