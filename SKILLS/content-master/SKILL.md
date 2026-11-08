@@ -1,7 +1,7 @@
 ---
 name: content-master
 description: Create and optimize social content, ads, hooks, scripts, captions, SEO and campaigns; independently critique and improve for audience fit, clarity, originality, evidence and platform compliance.
-version: 1.2.1
+version: 1.3.0
 status: active
 ---
 
@@ -72,6 +72,28 @@ This is an operational enforcement procedure for the existing editorial gate, no
 
 **Regression verification:** For each reported cross-tab failure, retain the verbatim prompt, returned draft, critique and observed evidence of Skill loading. Distinguish (a) quality failure of returned copy, (b) missing execution evidence and (c) proven Skill-routing failure. A GitHub update or a self-reported score does not demonstrate a cross-tab fix. Re-test the exact prompt in a new chat and review its returned copy before declaring success.
 
+## Marketing creative-strength standard (service content)
+
+Apply automatically when the user requests promotional/service content, even if the brief only says "write content about service X". This augments, not replaces, the existing clinical, evidence, platform and CORE gates. Explicitly educational, consent, neutral research or crisis communication overrides conversion-oriented defaults.
+
+**Creative brief before drafting:** Infer audience awareness, likely interest, emotional motivation (without asserting personal flaws), the ONE reader benefit, a truthful reason to consider this provider/service, channel and desired action. If a provider differentiator is not verified, use a concrete decision insight rather than inventing a unique advantage.
+
+**Hook competition:** Internally draft at least THREE materially different openings, such as (a) an unexpected but truthful insight, (b) a relatable everyday situation, (c) a useful comparison or misconception. Select by specificity, curiosity, credibility, tone and the ability of the body to deliver a payoff. Reject generic openers, empty rhetorical questions, alarmist fear and clickbait. Do not expose all candidates unless requested.
+
+**Retention and payoff:** Design a short attention arc: hook -> relatable situation or tension -> useful specific insight -> credible service relevance -> one low-friction next action. Deliver the promised insight within the first substantial paragraph; add concrete decision factors or practical examples rather than generic harmony/beauty advice or a three-question checklist. Favor readable, varied sentence lengths and short mobile-friendly paragraphs. Never fabricate cases, patient quotes, before/after outcomes or credentials to create a story.
+
+**Polite wit:** For ordinary organic social marketing, permit a light, warm, clever, conversational touch when it suits the brand and audience. Humor is an option, not a quota: default to subtle rather than jokes, and omit for sensitive medical risk, complications, consent, grief or distressed patients. Never mock appearance, age, body shape, insecurity or medical conditions. Maintain a polished, respectful and credible professional voice. For luxury brands, wit should be restrained.
+
+**Marketing psychology without manipulation:** Use truthful curiosity gaps with real payoffs, specificity, clear contrast, relevance, concrete benefits, helpful micro-examples and authentic choice framing. Social proof, scarcity, price anchors, offers, statistics and urgency are allowed only when verified and accurately contextualized. Do not use fear-based body-image pressure, false guarantees, bait engagement, invented social proof or unsupported claims. A strong hook is not a license to exaggerate.
+
+**Anti-template variation:** Avoid recycling the same formula across successive posts. Vary editorial angle (story, myth/fact, comparison, decision guide, expert perspective, relatable situation), opening rhythm, body progression and CTA while preserving the brief. Do not automatically end every post with an aesthetic-preference question or 'inbox for consultation'. Use one purposeful CTA connected to the article; an optional genuine discussion prompt may be used for organic content but is not mandatory. Keep hashtags relevant and correctly spelled; do not pad with trend tags without evidence.
+
+**Channel-aware execution:** Paid ads prioritize policy-safe conversion and a clear next step; organic posts may prioritize reading, saving, genuine comments and qualified inquiry; short video scripts require an early hook and timely payoff; SEO articles prioritize search intent and substantive depth. Do not claim measured engagement, CTR or conversion improvements without actual data.
+
+**Mandatory marketing Critic gate before release:** Inspect the actual draft and answer all six questions: (1) Would a plausible target reader stop for this specific opening? (2) Does the body repay the hook quickly with a genuinely useful or surprising insight? (3) Is the service/provider relevance clear without invented claims? (4) Is the writing human, varied and, where appropriate, subtly witty rather than generic or robotic? (5) Is there one coherent, low-friction next action? (6) Are medical accuracy, informed choice, privacy and platform risks respected? A generic safe educational paragraph plus a repeated booking CTA, or a hook with no payoff, is a Major goal-fit defect for a service-marketing brief. Editor must rewrite the actual copy and Re-check must inspect the corrected text before any PASS. This adds no new CORE scoring category, does not change the 90 threshold or four-round maximum, and does not guarantee performance metrics.
+
+**Incremental feedback policy:** When the user reports a recurring stylistic weakness, propose a narrowly scoped improvement to this active Skill, compare it to existing rules, preserve previous constraints, version the change and verify the updated source. A user critique of one artifact is not proof of automatic execution in other chats. Keep task-level preferences separate from universal safety requirements.
+
 ## Conditional medical-aesthetics social content optimization
 
 Activate this checklist when the deliverable promotes or explains aesthetic medicine, cosmetic procedures, body/face enhancement or related consultations on Facebook, Instagram, TikTok or other platforms. Apply it **before** final delivery, as part of the mandatory editorial gate; do not burden unrelated content.
@@ -138,6 +160,8 @@ If code execution is actually available, `python -m unittest -v TESTS/t10/test_c
 **Second T10 negative fixture:** A post that opens with 'Một dáng mũi đẹp trên ảnh chưa chắc...' and then asks three preference questions without providing a concrete answer is still a Major value/payoff failure. Treat a series of questions as a prompt for insight, not a substitute for insight. The deterministic screen flags three or more questions with fewer than two concrete service/clinical details as `QUESTIONNAIRE_WITHOUT_PAYOFF`; this is only a heuristic and may false-positive, so manual editorial review is required.
 
 ## Changelog
+- 1.3.0: Added stronger marketing hook competition, retention/payoff, restrained humor, ethical persuasion, anti-template variation and explicit pre-delivery marketing Critic gate.
+
 - 1.2.1: Calibrated against second T10 question-list negative fixture; clarified that questions do not constitute a developed payoff.
 
 - 1.2.0: Added T10 negative-control calibration, explicit anti-template rejection and optional deterministic screening.
