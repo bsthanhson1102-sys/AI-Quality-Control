@@ -1,7 +1,7 @@
 ---
 name: content-master
 description: Create and optimize social content, ads, hooks, scripts, captions, SEO and campaigns; independently critique and improve for audience fit, clarity, originality, evidence and platform compliance.
-version: 1.2.0
+version: 1.2.1
 status: active
 ---
 
@@ -135,7 +135,11 @@ If code execution is actually available, `python -m unittest -v TESTS/t10/test_c
 
 **Calibration requirement:** A final artifact matching a known failed fixture must never be given 90+ solely because its language is clean and medical claims are cautious. Re-evaluate the goal-fit, depth and practical-value CORE dimensions and cite the concrete improvement. No fixed formula can guarantee compelling marketing copy; reviewer judgment remains necessary.
 
+**Second T10 negative fixture:** A post that opens with 'Một dáng mũi đẹp trên ảnh chưa chắc...' and then asks three preference questions without providing a concrete answer is still a Major value/payoff failure. Treat a series of questions as a prompt for insight, not a substitute for insight. The deterministic screen flags three or more questions with fewer than two concrete service/clinical details as `QUESTIONNAIRE_WITHOUT_PAYOFF`; this is only a heuristic and may false-positive, so manual editorial review is required.
+
 ## Changelog
+- 1.2.1: Calibrated against second T10 question-list negative fixture; clarified that questions do not constitute a developed payoff.
+
 - 1.2.0: Added T10 negative-control calibration, explicit anti-template rejection and optional deterministic screening.
 
 - 1.1.0: Added tiered local QC gate, evidence-based Major resolution, reviewer-mode disclosure and domain acceptance.
