@@ -1,7 +1,7 @@
 ---
 name: content-master
 description: Create and optimize social content, ads, hooks, scripts, captions, SEO and campaigns; independently critique and improve for audience fit, clarity, originality, evidence and platform compliance.
-version: 1.3.1
+version: 1.3.2
 status: active
 ---
 
@@ -115,6 +115,20 @@ This pattern is an example of specificity and payoff, **not** a mandatory templa
 
 **Acceptance fixture:** For the exact prompt "Viết content về dịch vụ độn cằm cho Dr. Thanh Sơn", the final result must (a) have a distinct attention-worthy hook; (b) deliver an observable, concrete service-relevant insight in the body; (c) show a recognizable human voice, optionally restrained wit; (d) offer one non-coercive action; (e) avoid invented credentials/results and misleading clinical claims. The Critic must compare the final result against BOTH the observed weak draft and the negative control above, citing at least one specific difference. If it merely paraphrases either, the Major remains unresolved. This is an editorial regression fixture, not an automated end-to-end cross-tab test.
 
+## Example-before-list editorial check (v1.3.2)
+
+**Observed fixture:** A chin-augmentation social post opens "Độn cằm không phải cứ làm cằm nhô hơn là gương mặt sẽ thanh thoát hơn", lists three dimensions (profile projection, frontal lower-face length, lip/chin/jaw transition), adds a polite joke about reference photos, and ends with a keyword-based consultation CTA. This is a genuine improvement in hook, specificity, warmth and actionability over earlier drafts. Do NOT label it a wholesale failure or claim that it proves Skill execution. The remaining opportunity is that the three-factor list is not illustrated: the reader learns WHAT to assess but not WHY it changes the decision.
+
+**Conditional editorial rule:** When a marketing draft relies on a list of 3+ abstract evaluation factors and the central promise is to help the reader understand a decision, the Creator should ordinarily include one brief concrete contrast or hypothetical example that connects at least two factors to the consequence. Example should appear before or alongside the list when this improves readability, not as an inflexible first-sentence template. For a very short ad, a straightforward benefit-led hook and one useful detail may be better than an example. Do not require examples for all content or inflate concise copy merely to satisfy a checklist.
+
+**Worked weak excerpt:** "Có ba điểm đáng xem: độ nhô khi nhìn nghiêng, chiều dài khi nhìn chính diện và đường chuyển tiếp môi-cằm-hàm." This identifies factors but leaves their practical relationship abstract.
+
+**Worked improved excerpt:** "Có dáng cằm nhìn nghiêng khá cân đối nhưng khi nhìn thẳng lại khiến phần dưới gương mặt có cảm giác dài hơn. Vì thế, khi trao đổi dáng cằm, không thể chỉ nhìn độ nhô: cần xem cả tỷ lệ chính diện và sự chuyển tiếp giữa môi, cằm, đường hàm." This is an illustrative possibility, not a diagnosis, prediction or claim that the procedure will achieve a given result. Preserve medical uncertainty and professional assessment.
+
+**Critic question:** After reading the post, can a reader describe one plausible situation in which two of the named factors lead to a different aesthetic consideration? If not, and the post's objective requires explaining the decision, ask Editor to add one compact, accurate example. If the post already has a vivid payoff or is intentionally very short, do not force another illustration. Preserve the strong hook, tasteful humor, concise CTA and all prior medical/policy constraints; a revision must not regress these strengths.
+
+**Regression acceptance:** Compare against the observed fixture above. A better revision should preserve its specific hook and low-friction keyword CTA while adding a concrete, understandable connection between factors; a rewrite that merely adds more questions, more anatomy jargon or a longer generic consultation paragraph does not count as an improvement. This is a manual editorial fixture, not proof of automated cross-tab loading or measured conversion lift.
+
 ## Conditional medical-aesthetics social content optimization
 
 Activate this checklist when the deliverable promotes or explains aesthetic medicine, cosmetic procedures, body/face enhancement or related consultations on Facebook, Instagram, TikTok or other platforms. Apply it **before** final delivery, as part of the mandatory editorial gate; do not burden unrelated content.
@@ -181,6 +195,8 @@ If code execution is actually available, `python -m unittest -v TESTS/t10/test_c
 **Second T10 negative fixture:** A post that opens with 'Một dáng mũi đẹp trên ảnh chưa chắc...' and then asks three preference questions without providing a concrete answer is still a Major value/payoff failure. Treat a series of questions as a prompt for insight, not a substitute for insight. The deterministic screen flags three or more questions with fewer than two concrete service/clinical details as `QUESTIONNAIRE_WITHOUT_PAYOFF`; this is only a heuristic and may false-positive, so manual editorial review is required.
 
 ## Changelog
+- 1.3.2: Added conditional example-before-list editorial check and preserved strengths from observed chin-content fixture.
+
 - 1.3.1: Added observed chin-content regression, distinctive payoff requirement, narrative/emotion Critic check, and positive/negative worked examples.
 
 - 1.3.0: Added stronger marketing hook competition, retention/payoff, restrained humor, ethical persuasion, anti-template variation and explicit pre-delivery marketing Critic gate.
