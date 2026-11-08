@@ -4,10 +4,12 @@ on:
     paths:
       - 'TESTS/t10/**'
       - '.github/workflows/t10-execution.yml'
+      - 'RELEASES/**'
   pull_request:
     paths:
       - 'TESTS/t10/**'
       - '.github/workflows/t10-execution.yml'
+      - 'RELEASES/**'
   workflow_dispatch:
 permissions:
   contents: read
@@ -21,3 +23,5 @@ jobs:
           python-version: '3.12'
       - name: Run T10 regression tests
         run: python -m unittest discover -s TESTS/t10 -p 'test_*.py' -v
+      - name: Check release candidates (fail closed)
+        run: python TESTS/t10/check_release_candidates.py .
