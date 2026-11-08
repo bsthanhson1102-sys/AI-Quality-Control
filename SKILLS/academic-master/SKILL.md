@@ -1,7 +1,7 @@
 ---
 name: academic-master
 description: Plan, draft, revise and audit academic assignments, reports, theses and clinical case writeups for structure, evidence, methodology and formatting compliance.
-version: 1.0.0
+version: 1.1.0
 status: active
 ---
 
@@ -59,7 +59,22 @@ Use the requested structure and file specifications. If a downloadable file is r
 ## Related skills
 Use research-master for literature search and evidence appraisal; coding-master for statistical scripts or data processing.
 
+## Mandatory Local QC Gate (runtime enforcement)
+
+This gate applies whenever this specialist Skill is actually loaded; it does not claim universal auto-triggering. Use the canonical `CORE/quality-control.md` (deployed copy: `references/core-rubric.md`); its seven weights 25/20/15/15/10/10/5, zero unresolved Critical/Major, >=90, three release conditions and maximum four creation/revision rounds are unchanged.
+
+- **Light:** one concise accuracy, intent and safety self-check. Do not force full review passes for trivial tasks.
+- **Standard:** Creator drafts; Critic reviews the **actual artifact** and records exact passage/defect/severity; Editor corrects; Re-check maps every Major/Critical finding to an observable change and tests regressions; Final Auditor applies the unchanged CORE release conditions. Do not infer a step ran from the existence of a final artifact.
+- **Full:** Standard plus an evidence ledger and applicable domain + technical acceptance gates. Mark non-applicable checks N/A with reasons. Required unexecuted checks are NOT RUN and prevent PASS.
+- **Evidence discipline:** LOADED != APPLIED != VERIFIED. Record brief, artifact, finding IDs, corrections, re-check result, release decision and any unverified steps. An absent trace cannot be retrospectively invented. A weak final artifact with unresolved Major remains NOT PASS regardless of a self-awarded high score.
+- **Reviewer mode:** Default `SINGLE_MODEL_ROLE_PASSES`; use `SEPARATE_WORKER_EXECUTION` only when actual workers were invoked and execution evidence exists. Worker separation alone is not proof of different models or independence.
+- **Delivery:** Provide the requested result first and a concise decision/limitations if relevant. Detailed audit evidence is shown when requested; do not claim hidden reasoning is a durable audit log.
+
+**Domain acceptance (academic):** Verify source fidelity, exact requested structure, medical/academic accuracy, answer keys and any referenced figures. Unseen figures or unverified key answers block definitive approval where material. A generated document's existence is not proof its layout or citations were checked.
+
 ## Changelog
+- 1.1.0: Added tiered local QC gate, evidence-based Major resolution, reviewer-mode disclosure and domain acceptance.
+
 - 2026-11-08: Applied CORE Release Gate to question banks and medical study materials; unverified image IDs block definitive approval (v1.0.0 retained).
 - 2026-11-08: Added per-image evidence ledger, ambiguous-figure handling, separate technical/domain gates and mandatory answer-key verification (v1.0.0 retained).
 - 1.0.0: Initial versioned release with rubric-first workflow, source integrity and clinical safeguards.
