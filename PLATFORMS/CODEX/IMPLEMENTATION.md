@@ -49,7 +49,7 @@ Keep shared CORE guidance and the registry available as agent-level context or r
 
 ## Version-pinned offline deployment (2026-11-08)
 - The six domain specialists remain primary for ordinary single-domain work. The optional active `ai-qc-router` is for explicit AI-QC, multi-domain coordination and Full-risk review; it is **not** a universal auto-trigger.
-- Source of truth remains `REGISTRY/skills-registry.yml` and `CORE/quality-control.md`. The pinned copy is `PLATFORMS/CODEX/references/registry-snapshot.yml` (registry blob SHA `93fe72a71a868644c106f05b99c5ca2538807c1a`, registry version 1.1.0). Snapshot is a fallback, not proof that GitHub is current.
+- Source of truth remains `REGISTRY/skills-registry.yml` and `CORE/quality-control.md`. The pinned copy is `PLATFORMS/CODEX/references/registry-snapshot.yml` (registry blob SHA `ef826a043f3ab99cfd8da67078490835789788e5`, registry version 1.2.0). Snapshot is a fallback, not proof that GitHub is current.
 - To deploy from a local checkout, run `python PLATFORMS/CODEX/scripts/deploy_skills.py /path/to/project` (on Windows, use a Windows project path). This verifies the registry blob and snapshot, copies active skills to `.agents/skills/<id>/SKILL.md`, and bundles `references/core-rubric.md` plus `references/registry-snapshot.yml` with each installed skill. No draft skills are deployed.
 - This is **project-local**, not automatic global ChatGPT installation. Check runtime documentation for skill directories; `.user_skills/` is not assumed. Refresh the checkout and pin when updating; script refuses mismatched versions.
 - A minimal global ChatGPT Custom Instruction can still request Light/Standard/Full classification and routing. GitHub updates do not install or activate skills in new ChatGPT tabs.
@@ -69,3 +69,8 @@ Keep shared CORE guidance and the registry available as agent-level context or r
 4. Test Light, Standard and Full tasks separately, including a deliberately weak service-marketing post; a self-awarded high score with unresolved Major must result in NOT PASS.
 5. Test one missing-evidence case and one fourth-round unresolved Major case; both must block PASS.
 6. Record which checks were actually executed; repository edits alone do not prove runtime integration or output quality.
+
+## T10 local-gate change (2026-11-08)
+- Six specialist skills now at v1.1.0, each with a domain-specific mandatory local QC gate and tiering. Router remains v1.0.0. Canonical CORE rubric is unchanged.
+- New-tab activation is NOT established by GitHub writes. Runtime discovery, actual Critic/Editor/Re-check traces, and user-facing artifact quality require witnessed regression runs.
+- An isolated local gate is not an independent enforcement engine. A model can still omit steps or self-score inaccurately; external deterministic acceptance checks are preferable where available.
