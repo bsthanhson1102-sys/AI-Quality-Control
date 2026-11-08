@@ -1,7 +1,7 @@
 ---
 name: content-master
 description: Create and optimize social content, ads, hooks, scripts, captions, SEO and campaigns; independently critique and improve for audience fit, clarity, originality, evidence and platform compliance.
-version: 1.3.3
+version: 1.3.4
 status: active
 ---
 
@@ -60,7 +60,7 @@ This is an operational enforcement procedure for the existing editorial gate, no
 
 **No draft-to-user shortcut:** When writing a substantive service-marketing post, do not send the Creator draft as the final answer. Before composing the final answer, keep a compact task-scoped audit record with:
 - BRIEF: the user's literal request, inferred intent (conversion vs education), channel assumption and target action.
-- CANDIDATE: first full draft and two distinct hook candidates.
+- CANDIDATE: first full draft and at least three distinct hook candidates for substantive marketing posts (one concise hook check for Light tasks).
 - CRITIC: specific passages that fail intent, curiosity/payoff, service relevance, differentiation, authentic engagement, CTA, factual/medical accuracy or platform-risk review. Classify each issue Critical/Major/Minor.
 - EDITOR: actual corrected full copy; identify the changes that resolve each blocking issue.
 - RECHECK: compare final copy to the original brief and every blocking finding, including new medical/policy claims; mark each RESOLVED / UNRESOLVED / UNVERIFIED.
@@ -146,7 +146,7 @@ This pattern is an example of specificity and payoff, **not** a mandatory templa
 Activate this checklist when the deliverable promotes or explains aesthetic medicine, cosmetic procedures, body/face enhancement or related consultations on Facebook, Instagram, TikTok or other platforms. Apply it **before** final delivery, as part of the mandatory editorial gate; do not burden unrelated content.
 
 **Attention and interaction (truthful, not manipulative):**
-- Draft at least two genuinely different hook angles internally (e.g. a specific curiosity question, a useful myth-versus-fact distinction, a decision-making insight); select the strongest grounded in the actual content. A hook must deliver on its promise, not use false shock, fear, sensational outcomes or unsupported claims.
+- Draft at least three genuinely different hook angles internally for substantive marketing posts (e.g. a specific curiosity question, a useful myth-versus-fact distinction, a decision-making insight); select the strongest grounded in the actual content. A hook must deliver on its promise, not use false shock, fear, sensational outcomes or unsupported claims.
 - Give a meaningful answer or useful insight early; use short mobile-friendly paragraphs and a clear progression from hook to value to one relevant CTA.
 - Encourage authentic interaction with a specific optional question tied to aesthetic preferences or educational choices. Avoid engagement bait, compulsory tagging/sharing, fake urgency or fabricated testimonials.
 - Optimize for the requested platform and placement; organic post and paid ad are not interchangeable. Do not assert reach, approval, click-through rate or conversion outcomes without actual evidence.
@@ -207,6 +207,8 @@ If code execution is actually available, `python -m unittest -v TESTS/t10/test_c
 **Second T10 negative fixture:** A post that opens with 'Một dáng mũi đẹp trên ảnh chưa chắc...' and then asks three preference questions without providing a concrete answer is still a Major value/payoff failure. Treat a series of questions as a prompt for insight, not a substitute for insight. The deterministic screen flags three or more questions with fewer than two concrete service/clinical details as `QUESTIONNAIRE_WITHOUT_PAYOFF`; this is only a heuristic and may false-positive, so manual editorial review is required.
 
 ## Changelog
+- 1.3.4: Reconciled legacy two-hook references with the three-angle marketing standard; preserved Light-task exception and unchanged CORE gates.
+
 - 1.3.3: Added cross-tab QC evidence and version-snapshot reconciliation, with retrospective audit fixture.
 
 - 1.3.2: Added conditional example-before-list editorial check and preserved strengths from observed chin-content fixture.
