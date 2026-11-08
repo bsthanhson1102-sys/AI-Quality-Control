@@ -1,14 +1,14 @@
-# AI-QC pinned registry snapshot; upstream blob SHA 52391e03c29cd4f22935824716f57a8b5a7be2df
+# AI-QC pinned registry snapshot; upstream blob SHA 448af3a4aa78803a073806d5fff5bb813f5ae727
 schema_version: 1
 system: AI-QC
-registry_version: 1.3.0
+registry_version: 1.3.1
 source_of_truth: https://github.com/bsthanhson1102-sys/AI-Quality-Control
 default_qc_threshold: 90
 max_improvement_rounds: 4
 critical_issue_blocks_pass: true
 skills:
   - id: content-master
-    version: 1.2.0
+    version: 1.2.1
     path: SKILLS/content-master/SKILL.md
     status: active
     triggers: [writing, advertising, social-media, seo, brand-messaging, scripts]
