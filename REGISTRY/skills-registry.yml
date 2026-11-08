@@ -1,38 +1,38 @@
 schema_version: 1
 system: AI-QC
-registry_version: 1.1.0
+registry_version: 1.2.0
 source_of_truth: https://github.com/bsthanhson1102-sys/AI-Quality-Control
 default_qc_threshold: 90
 max_improvement_rounds: 4
 critical_issue_blocks_pass: true
 skills:
   - id: content-master
-    version: 1.0.0
+    version: 1.1.0
     path: SKILLS/content-master/SKILL.md
     status: active
     triggers: [writing, advertising, social-media, seo, brand-messaging, scripts]
   - id: image-master
-    version: 1.0.0
+    version: 1.1.0
     path: SKILLS/image-master/SKILL.md
     status: active
     triggers: [image-generation, image-editing, visual-design, image-critique, scientific-image-analysis, medical-image-review, visual-identification]
   - id: video-master
-    version: 1.0.0
+    version: 1.1.0
     path: SKILLS/video-master/SKILL.md
     status: active
     triggers: [video, storyboard, editing, subtitles, short-form-video]
   - id: academic-master
-    version: 1.0.0
+    version: 1.1.0
     path: SKILLS/academic-master/SKILL.md
     status: active
     triggers: [academic-writing, assignments, reports, clinical-case-writeups, study]
   - id: research-master
-    version: 1.0.0
+    version: 1.1.0
     path: SKILLS/research-master/SKILL.md
     status: active
     triggers: [research, comparisons, evidence-review, fact-checking, current-information, medical-fact-verification]
   - id: coding-master
-    version: 1.0.0
+    version: 1.1.0
     path: SKILLS/coding-master/SKILL.md
     status: active
     triggers: [programming, debugging, architecture, automation, code-review]
