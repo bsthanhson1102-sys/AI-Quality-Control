@@ -1,7 +1,7 @@
 ---
 name: ai-qc-router
 description: Coordinate AI-QC for explicitly requested AI-QC audits, cross-domain deliverables and high-stakes Full reviews; specialist skills handle routine single-domain work.
-version: 1.0.0
+version: 1.1.0
 status: active
 ---
 
@@ -25,3 +25,16 @@ GitHub is canonical for updates; a pinned, verified registry snapshot is a runti
 
 ## Mode disclosure
 Default: role-separated passes in one assistant. Describe separate Organizer/Workers as independent only if the runtime actually ran them and the evidence is available.
+
+## Cross-runtime compatibility and T10 integration (v1.1.0)
+
+A third-party/backup skill bundle may describe Organizer/Workers, absolute paths under `/home/user/.dola/`, and native tools unavailable in the current host. These are **optional environment-specific implementations**, not mandatory prerequisites and not evidence that independent agents ran. For every task, discover the actual runtime capabilities first; default to `SINGLE_MODEL_ROLE_PASSES` and mark unavailable workers/tools NOT RUN. Never substitute a pinned old registry for a verified current Registry without disclosure.
+
+For service-marketing tasks, use active `content-master` and its editorial acceptance criteria. If a tool-enabled execution environment can run repository Python, optionally execute `TESTS/t10/content_gate.py` as a negative-control preflight and `TESTS/t10/release_gate.py` on an actual JSON evidence ledger. **Neither is automatically invoked merely by reading this Skill**. The release-gate outcome `SCHEMA_ACCEPTED_REVIEW_REQUIRED` is not PASS: a separate content/domain review and the canonical CORE Release Gate remain mandatory. Record command, exit status, test output and artifact hash where available; otherwise mark NOT RUN.
+
+A real automatic publication block requires an explicit runtime/orchestrator hook that invokes the gate and respects its exit status. ChatGPT conversations without that hook cannot be claimed to have executable pre-release enforcement. Do not claim a new-chat regression PASS without observing the new chat's actual behavior and evidence.
+
+**Migration policy:** treat bundled ZIP Skills as reference material. Preserve the canonical `CORE/quality-control.md`, current active specialist Skills, registry status/version and T10 fixtures. Only port compatible incremental improvements after source comparison, regression checks and versioned changes; never overwrite the live Skill tree with an old snapshot.
+
+## Changelog
+- 1.1.0: Added portable runtime capability checks, safe ZIP migration policy and explicit T10 gate integration boundaries.
