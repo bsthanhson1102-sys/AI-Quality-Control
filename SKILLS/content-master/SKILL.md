@@ -1,7 +1,7 @@
 ---
 name: content-master
 description: Create and optimize social content, ads, hooks, scripts, captions, SEO and campaigns; independently critique and improve for audience fit, clarity, originality, evidence and platform compliance.
-version: 1.0.0
+version: 1.1.0
 status: active
 ---
 
@@ -114,5 +114,20 @@ Provide the requested artifact first. Add variants, rationale, hashtags, calenda
 ## Related skills
 Use research-master for current platform rules, market evidence or substantiation. Use image-master or video-master when a campaign also needs visual assets.
 
+## Mandatory Local QC Gate (runtime enforcement)
+
+This gate applies whenever this specialist Skill is actually loaded; it does not claim universal auto-triggering. Use the canonical `CORE/quality-control.md` (deployed copy: `references/core-rubric.md`); its seven weights 25/20/15/15/10/10/5, zero unresolved Critical/Major, >=90, three release conditions and maximum four creation/revision rounds are unchanged.
+
+- **Light:** one concise accuracy, intent and safety self-check. Do not force full review passes for trivial tasks.
+- **Standard:** Creator drafts; Critic reviews the **actual artifact** and records exact passage/defect/severity; Editor corrects; Re-check maps every Major/Critical finding to an observable change and tests regressions; Final Auditor applies the unchanged CORE release conditions. Do not infer a step ran from the existence of a final artifact.
+- **Full:** Standard plus an evidence ledger and applicable domain + technical acceptance gates. Mark non-applicable checks N/A with reasons. Required unexecuted checks are NOT RUN and prevent PASS.
+- **Evidence discipline:** LOADED != APPLIED != VERIFIED. Record brief, artifact, finding IDs, corrections, re-check result, release decision and any unverified steps. An absent trace cannot be retrospectively invented. A weak final artifact with unresolved Major remains NOT PASS regardless of a self-awarded high score.
+- **Reviewer mode:** Default `SINGLE_MODEL_ROLE_PASSES`; use `SEPARATE_WORKER_EXECUTION` only when actual workers were invoked and execution evidence exists. Worker separation alone is not proof of different models or independence.
+- **Delivery:** Provide the requested result first and a concise decision/limitations if relevant. Detailed audit evidence is shown when requested; do not claim hidden reasoning is a durable audit log.
+
+**Domain acceptance (content):** The final text must deliver a specific, truthful payoff for its opening, a developed audience-relevant insight (not only a three-item checklist), an appropriate provider/service value proposition without invented differentiators, and a CTA connected to the body. In service marketing, an education-only list plus generic inbox CTA is a **Major** goal-fit failure. Check claims and medical/platform risk separately. Show the exact passage improved for each Major; if unchanged, keep it UNRESOLVED and block PASS.
+
 ## Changelog
+- 1.1.0: Added tiered local QC gate, evidence-based Major resolution, reviewer-mode disclosure and domain acceptance.
+
 - 1.0.0: Initial versioned release with defined scope, workflow, critique and evidence safeguards.
