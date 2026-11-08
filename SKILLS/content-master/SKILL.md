@@ -38,6 +38,25 @@ For Facebook/social marketing, check specifically: a distinctive truthful openin
 
 **Right-sized scope:** light one-line copy can use a concise editorial check; substantive posts/ads require the full pass. This is a conditional content-master requirement, not a mandatory three-Skill load, a new CORE scoring dimension, or a requirement for unrelated code, image, video, academic or research tasks. Record execution honestly; do not claim a review or test that was not performed.
 
+## Conditional medical-aesthetics social content optimization
+
+Activate this checklist when the deliverable promotes or explains aesthetic medicine, cosmetic procedures, body/face enhancement or related consultations on Facebook, Instagram, TikTok or other platforms. Apply it **before** final delivery, as part of the mandatory editorial gate; do not burden unrelated content.
+
+**Attention and interaction (truthful, not manipulative):**
+- Draft at least two genuinely different hook angles internally (e.g. a specific curiosity question, a useful myth-versus-fact distinction, a decision-making insight); select the strongest grounded in the actual content. A hook must deliver on its promise, not use false shock, fear, sensational outcomes or unsupported claims.
+- Give a meaningful answer or useful insight early; use short mobile-friendly paragraphs and a clear progression from hook to value to one relevant CTA.
+- Encourage authentic interaction with a specific optional question tied to aesthetic preferences or educational choices. Avoid engagement bait, compulsory tagging/sharing, fake urgency or fabricated testimonials.
+- Optimize for the requested platform and placement; organic post and paid ad are not interchangeable. Do not assert reach, approval, click-through rate or conversion outcomes without actual evidence.
+
+**Risk-sensitive wording and platform review:**
+- There is **no universal reliable list of banned words** across platforms. Evaluate the full wording, context, visual creative, landing page and ad objective against the platform's current policies when that verification is available. If not checked, mark platform approval **UNVERIFIED**, never guaranteed.
+- Prefer respectful, neutral, non-graphic, medically accurate wording over sensational descriptions. Avoid graphic procedure details when unnecessary, direct assertions about the viewer's body or insecurities, stigmatizing comparisons, unrealistic transformations, guaranteed safety/results, unsubstantiated medical claims, misleading before/after framing and coercive body-image pressure.
+- Do not disguise a prohibited claim using misspellings, symbols, euphemisms or code words to evade moderation. Do not omit material risks or make a misleading medical assertion merely to avoid a sensitive term. Use plain alternatives only when they remain accurate (e.g. 'tư vấn lựa chọn phù hợp', 'tìm hiểu phương án', 'quá trình hồi phục' rather than unsupported promises).
+- Distinguish educational organic copy, paid advertising and patient information. Necessary informed-consent/risk information must remain accurate even if it is not suitable for a short promotional caption.
+- Check brand, claimed expertise, pricing, availability, promotion, results and testimonial permissions against verified inputs; do not invent them.
+
+**Pre-delivery rejection triggers:** generic hook with no specific payoff; unsupported claim; high-risk personal-attribute targeting; misleading medical wording; fabricated urgency/price/results; engagement bait; absent or confusing CTA; or a claim of policy compliance without a current check. Critic identifies each defect; Editor revises the actual copy; Re-check verifies all corrections; Final Auditor applies the unchanged CORE release gate. The goal is strong compliant communication, **not** circumvention of platform enforcement.
+
 ## Quality criteria
 - Hook earns attention without misleading or relying on empty clickbait.
 - Audience insight is specific and relevant.
