@@ -17,7 +17,7 @@ SNAP = ROOT / "PLATFORMS/CODEX/references/registry-snapshot.yml"
 EXPECTED = "93fe72a71a868644c106f05b99c5ca2538807c1a"
 
 def git_blob_sha(data):
-    return hashlib.sha1(b"blob " + str(len(data)).encode() + b"\\0" + data).hexdigest()
+    return hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()
 
 if not REG.exists() or not SNAP.exists():
     raise SystemExit("BLOCKED: missing registry or pinned snapshot")
@@ -25,9 +25,9 @@ data = REG.read_bytes()
 if git_blob_sha(data) != EXPECTED:
     raise SystemExit("BLOCKED: registry differs from pinned snapshot; refresh deployment metadata")
 snapshot = SNAP.read_text(encoding="utf-8")
-if snapshot.split("\\n", 1)[1] != data.decode("utf-8"):
+if snapshot.split("\n", 1)[1] != data.decode("utf-8"):
     raise SystemExit("BLOCKED: snapshot content does not match registry")
-entries = re.findall(r"(?m)^  - id: ([^\\n]+)\\n    version: ([^\\n]+)\\n    path: ([^\\n]+)\\n    status: ([^\\n]+)", data.decode())
+entries = re.findall(r"(?m)^  - id: ([^\n]+)\n    version: ([^\n]+)\n    path: ([^\n]+)\n    status: ([^\n]+)", data.decode())
 if not entries:
     raise SystemExit("BLOCKED: no registry entries")
 out = TARGET / ".agents/skills"
