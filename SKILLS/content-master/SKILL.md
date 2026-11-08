@@ -23,6 +23,22 @@ Identify objective, audience, platform, offer or subject, desired action, brand 
 7. Improve weak hooks, clarity, specificity, flow, CTA and originality.
 8. Final-audit every required detail and deliver copy ready for the requested use.
 
+## Business-intent-first routing for service content
+
+Before drafting, infer the **actual business objective** from the user's wording and established context. For a user offering a service, an unqualified request such as "viết content về dịch vụ X" defaults to **service marketing** (attract relevant prospects, communicate a truthful reason to consider the service, invite a low-friction inquiry or consultation), not a generic educational checklist. Do not require the user to repeat "để bán hàng" or name an expert. This is a context-dependent default, not a universal assumption that every mention of a service is advertising.
+
+Intent overrides, in priority order:
+- Explicit education/explanation ("chia sẻ kiến thức", "giải thích", "hướng dẫn") -> educational content with an appropriate optional next step.
+- Explicit paid advertising ("quảng cáo", "chạy ads") -> conversion-oriented advertising with placement-specific policy review; do not treat organic and paid posts as interchangeable.
+- Explicit SEO/research/clinical consent -> their requested purpose, with appropriate evidence and safeguards.
+- Ambiguous service-content request from a service provider -> marketing-oriented organic social copy by default, with a hook, meaningful value proposition, differentiating **verified** information when available, and a specific non-coercive contact/consultation CTA.
+
+**Intent-to-copy acceptance test (mandatory for service marketing):** Before delivery, the Critic must answer: (1) Who is the plausible intended customer? (2) Why should they keep reading? (3) What accurate service-relevant value is conveyed? (4) Why would they contact this provider, without inventing differentiators? (5) What single appropriate next action is offered? A draft that merely lists questions to ask a clinician, general health advice, or neutral educational tips without a genuine service-marketing path **fails requirement/goal fit** and must be revised before release. A medical-service post may include useful education but must not mistake education for the sole requested objective.
+
+**Healthcare guardrail:** Conversion never overrides clinical appropriateness, informed choice, medical accuracy, patient privacy or platform policy. Do not assert that a procedure is needed, target personal health vulnerabilities, promise benefits/safety, or manufacture urgency. When indications cannot be assessed, promote professional evaluation and discussion rather than pressuring patients into a procedure. For intimate services such as circumcision, use discreet, non-graphic language and avoid direct assumptions about the viewer's condition. If provider credentials, prices, location or unique benefits are unverified, omit them instead of fabricating them.
+
+**Cross-tab regression fixture:** Given only "Viết content về dịch vụ nâng ngực" or "Viết content về dịch vụ cắt bao quy đầu" in a known clinic/business context, expected intent is **service marketing**; an education-only list with a generic booking line is an intent-routing failure. Assess hook, authentic interest, truthful service value, specific CTA, clinical/platform risk, and the existing CORE release conditions. Compare a second review under the *same brief* for substantive consistency. A GitHub Skill change alone does **not** prove that a separate chat loaded or executed it; record loading and execution evidence separately, and never claim cross-tab PASS without a witnessed run.
+
 ## Mandatory pre-delivery editorial gate
 
 For every substantial marketing/content deliverable, complete the following **before** showing the primary draft to the user, not only after the user asks for a review:
