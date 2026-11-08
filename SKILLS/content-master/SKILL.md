@@ -1,7 +1,7 @@
 ---
 name: content-master
 description: Create and optimize social content, ads, hooks, scripts, captions, SEO and campaigns; independently critique and improve for audience fit, clarity, originality, evidence and platform compliance.
-version: 1.3.0
+version: 1.3.1
 status: active
 ---
 
@@ -94,6 +94,27 @@ Apply automatically when the user requests promotional/service content, even if 
 
 **Incremental feedback policy:** When the user reports a recurring stylistic weakness, propose a narrowly scoped improvement to this active Skill, compare it to existing rules, preserve previous constraints, version the change and verify the updated source. A user critique of one artifact is not proof of automatic execution in other chats. Keep task-level preferences separate from universal safety requirements.
 
+## Distinctive creative payoff: diagnosis and worked examples (v1.3.1)
+
+**Observed regression to prevent:** A chin-augmentation post starting with "Cùng một dáng cằm mẫu, lên hai gương mặt có thể cho cảm giác rất khác nhau" and then saying "lưu ảnh thì nhanh" followed by generic facial-proportion advice and a clinic inbox CTA is safe and more conversational than a plain educational post, but still has a Major marketing weakness: no vivid, specific payoff, no memorable insight and almost no reason to keep reading after the opening. A single mildly witty phrase does not satisfy the creative-strength standard. Treat this as a content-quality fixture, not proof of whether a different chat loaded the Skill.
+
+**Specific fix, not more generic rules:** For substantial organic service marketing, require a *distinctive payoff unit* in the actual final copy: one relatable micro-scene, concrete contrast, original analogy or specific decision insight that is both relevant to the service and developed in at least two connected sentences. It must add information beyond "every person is different", "consult a doctor", "facial harmony" or a list of questions. A purely ornamental anecdote, generic quote or unexplained joke does not count. The Critic must point to the exact payoff sentences; if none exist, mark a Major goal-fit defect and have the Editor rewrite the post.
+
+**Short narrative without fabricated patient stories:** Use a hypothetical scenario clearly framed as hypothetical or a generalized observation. Never claim an actual patient said/did something without permission and evidence. Favor specific but non-diagnostic examples: "một ảnh nghiêng có thể khiến người xem chỉ chú ý độ nhô; ảnh chính diện lại cho biết thêm chiều rộng và tương quan phần dưới khuôn mặt". Avoid presenting a single facial ratio or anatomical adjustment as universally appropriate. For medical service promotion, factual nuance and the need for assessment remain mandatory.
+
+**Memorable line with substance:** Aim for one short, natural phrase readers can recall; it must summarize a real decision insight, not an unverified outcome. Light humor can be in this line but is optional. Do not force a pun or witty line into every medical post.
+
+**Reader-emotion check:** During Critic, separately assess whether the reader is likely to gain at least one of: curiosity resolved, a useful new distinction, an authentic smile, or informed confidence. Explain which *actual passage* creates that effect. Do not equate an emoji, question, or playful adjective with engagement. If the text is generic after the hook, revise before delivery.
+
+**Worked negative control (not acceptable final copy):** "Cùng một dáng cằm mẫu, lên hai gương mặt có thể khác nhau. Bác sĩ xem tỷ lệ cằm, môi, mũi và tư vấn phù hợp. Inbox đặt lịch." This is hook -> generic advice -> CTA, without payoff.
+
+**Worked positive pattern (illustrative copy, not clinical advice or a claim about provider outcomes):**
+> "Lưu một tấm ảnh dáng cằm chỉ mất vài giây. Nhưng có một chi tiết ảnh mẫu thường không kể hết: góc nghiêng cho thấy độ nhô, còn góc chính diện giúp nhìn thêm tương quan phần dưới gương mặt. Chỉ chọn theo một góc ảnh cũng giống chọn kính chỉ vì hợp với người mẫu — đẹp trên ảnh chưa chắc là lựa chọn hợp với tổng thể. Khi tìm hiểu độn cằm, điều đáng hỏi không chỉ là 'dáng nào đẹp?' mà còn là 'cần đánh giá những yếu tố nào trước khi chọn?'. Tại Thẩm mỹ Dr. Thanh Sơn, khách hàng có thể đặt lịch trao đổi mong muốn và được thăm khám để cân nhắc phương án, vật liệu, giới hạn và rủi ro trước khi quyết định. Muốn biết buổi tư vấn cần chuẩn bị gì? Nhắn tin để nhận hướng dẫn đặt lịch." 
+
+This pattern is an example of specificity and payoff, **not** a mandatory template to reproduce verbatim. Change angle, rhythm, insight and CTA for new posts. A compelling post may use no analogy or humor if the brief requires a formal tone. The example does not prove medical suitability, provider differentiation, ad approval or conversion effectiveness.
+
+**Acceptance fixture:** For the exact prompt "Viết content về dịch vụ độn cằm cho Dr. Thanh Sơn", the final result must (a) have a distinct attention-worthy hook; (b) deliver an observable, concrete service-relevant insight in the body; (c) show a recognizable human voice, optionally restrained wit; (d) offer one non-coercive action; (e) avoid invented credentials/results and misleading clinical claims. The Critic must compare the final result against BOTH the observed weak draft and the negative control above, citing at least one specific difference. If it merely paraphrases either, the Major remains unresolved. This is an editorial regression fixture, not an automated end-to-end cross-tab test.
+
 ## Conditional medical-aesthetics social content optimization
 
 Activate this checklist when the deliverable promotes or explains aesthetic medicine, cosmetic procedures, body/face enhancement or related consultations on Facebook, Instagram, TikTok or other platforms. Apply it **before** final delivery, as part of the mandatory editorial gate; do not burden unrelated content.
@@ -160,6 +181,8 @@ If code execution is actually available, `python -m unittest -v TESTS/t10/test_c
 **Second T10 negative fixture:** A post that opens with 'Một dáng mũi đẹp trên ảnh chưa chắc...' and then asks three preference questions without providing a concrete answer is still a Major value/payoff failure. Treat a series of questions as a prompt for insight, not a substitute for insight. The deterministic screen flags three or more questions with fewer than two concrete service/clinical details as `QUESTIONNAIRE_WITHOUT_PAYOFF`; this is only a heuristic and may false-positive, so manual editorial review is required.
 
 ## Changelog
+- 1.3.1: Added observed chin-content regression, distinctive payoff requirement, narrative/emotion Critic check, and positive/negative worked examples.
+
 - 1.3.0: Added stronger marketing hook competition, retention/payoff, restrained humor, ethical persuasion, anti-template variation and explicit pre-delivery marketing Critic gate.
 
 - 1.2.1: Calibrated against second T10 question-list negative fixture; clarified that questions do not constitute a developed payoff.
