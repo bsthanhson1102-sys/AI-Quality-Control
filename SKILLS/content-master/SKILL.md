@@ -54,6 +54,24 @@ For Facebook/social marketing, check specifically: a distinctive truthful openin
 
 **Right-sized scope:** light one-line copy can use a concise editorial check; substantive posts/ads require the full pass. This is a conditional content-master requirement, not a mandatory three-Skill load, a new CORE scoring dimension, or a requirement for unrelated code, image, video, academic or research tasks. Record execution honestly; do not claim a review or test that was not performed.
 
+## Executable pre-release checklist and audit trace (service marketing)
+
+This is an operational enforcement procedure for the existing editorial gate, not a replacement for CORE or a promise of cross-chat automation.
+
+**No draft-to-user shortcut:** When writing a substantive service-marketing post, do not send the Creator draft as the final answer. Before composing the final answer, keep a compact task-scoped audit record with:
+- BRIEF: the user's literal request, inferred intent (conversion vs education), channel assumption and target action.
+- CANDIDATE: first full draft and two distinct hook candidates.
+- CRITIC: specific passages that fail intent, curiosity/payoff, service relevance, differentiation, authentic engagement, CTA, factual/medical accuracy or platform-risk review. Classify each issue Critical/Major/Minor.
+- EDITOR: actual corrected full copy; identify the changes that resolve each blocking issue.
+- RECHECK: compare final copy to the original brief and every blocking finding, including new medical/policy claims; mark each RESOLVED / UNRESOLVED / UNVERIFIED.
+- FINAL AUDITOR: score the **final corrected copy**, not a hypothetical version, using exactly CORE 25/20/15/15/10/10/5; record technical and domain acceptance, evidence completeness, regression status and PASS / PASS WITH NOTES / NOT PASS / BLOCKED.
+
+**Hard rejection examples:** A clinic service request answered as a neutral list of things to ask a doctor with only a generic booking line; a title that merely says 'đặt lịch ngay' without curiosity or concrete value; a content-free body with no useful service insight; a misleading safety promise; or a generic CTA disconnected from the post. These must trigger actual revision before release, even if the text is medically cautious.
+
+**Release behavior:** Only label an artifact approved when all existing CORE gates are satisfied and score >=90 with no Critical/Major. Do not invent an audit score, claim independent expert review or assert that a different tab executed the Skill. If the audit cannot be completed, clearly label the output provisional or NOT PASS/BLOCKED as applicable. Do not flood the user with internal scoring unless asked; a short evidence-based status is sufficient when relevant.
+
+**Regression verification:** For each reported cross-tab failure, retain the verbatim prompt, returned draft, critique and observed evidence of Skill loading. Distinguish (a) quality failure of returned copy, (b) missing execution evidence and (c) proven Skill-routing failure. A GitHub update or a self-reported score does not demonstrate a cross-tab fix. Re-test the exact prompt in a new chat and review its returned copy before declaring success.
+
 ## Conditional medical-aesthetics social content optimization
 
 Activate this checklist when the deliverable promotes or explains aesthetic medicine, cosmetic procedures, body/face enhancement or related consultations on Facebook, Instagram, TikTok or other platforms. Apply it **before** final delivery, as part of the mandatory editorial gate; do not burden unrelated content.
