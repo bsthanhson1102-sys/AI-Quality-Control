@@ -25,3 +25,21 @@ Required: `brief`, `candidate` (initial full draft), `artifact` (revised full te
 
 ## Test matrix
 Missing Critic; missing Editor map; unresolved Major; missing Final Auditor; low CORE score; five rounds; domain NOT RUN; fake correction; blank finding; nonexistent finding passage; invalid score type; valid schema (review required). Run the command above and retain its output for evidence.
+
+## Fail-closed publishing adapter
+
+`publish_gate.py` is the executable integration point for **external publication workflows**. The workflow must refuse to publish unless this command exits 0:
+
+```bash
+python TESTS/t10/publish_gate.py path/to/ledger.json --approval path/to/approval.json
+```
+
+The separate approval file must contain `artifact_sha256` (SHA-256 of the exact UTF-8 final artifact string), `decision: "APPROVED"`, non-empty `reviewer` and `evidence`, and `domain_review: "PASS"`, `technical_review: "PASS"`. Any missing approval, changed artifact, missing reviewer, unresolved Major, insufficient CORE score or unexecuted gate returns exit code 2 and `BLOCKED`. Success returns `APPROVAL_RECORDED`, **not** an independently verified PASS: the approval is an attributable claim, not cryptographically authenticated. The operator and publishing system must verify reviewer identity, claims and actual review evidence before using it to publish. Never accept an LLM-generated approval as independent human approval.
+
+This adapter **does not automatically hook into ChatGPT** and the repository does not yet contain a production publishing system. A workflow using this adapter must explicitly check its exit code and only proceed when authorized.
+
+Run all T10 tests:
+
+```bash
+python -m unittest discover -s TESTS/t10 -p 'test_*.py' -v
+```
