@@ -1,0 +1,31 @@
+{
+  "project": "Đội ngũ Agent VTM Thanh Sơn",
+  "version": "0.1.0",
+  "status": "offline-prototype",
+  "framework": {
+    "name": "Hermes Agent",
+    "repository": "https://github.com/NousResearch/hermes-agent",
+    "commit": "5df966a97a2d5fe37a309266ea97acb0c856942d",
+    "source_location": "downloaded separately; not installed or vendored as active skills",
+    "license": "MIT",
+    "adaptation": "workflow design and role contracts; no Hermes runtime integration yet"
+  },
+  "ai_qc": {
+    "repository": "https://github.com/bsthanhson1102-sys/AI-Quality-Control",
+    "baseline_commit": "20c065db9536bc4f48d81b5df662e43b713bb1c5",
+    "registry_version": "1.4.6",
+    "rule": "at task start fetch current active registry, pin commit, load applicable skills; no silent fallback"
+  },
+  "connectors": {
+    "codex": "NOT_CONFIGURED",
+    "chatgpt": "NOT_CONFIGURED",
+    "gemini": "NOT_CONFIGURED",
+    "claude": "NOT_CONFIGURED",
+    "ollama": "NOT_CONFIGURED",
+    "facebook": "NOT_CONFIGURED",
+    "google_drive": "NOT_CONFIGURED"
+  },
+  "publishing_enabled": false,
+  "scheduling_enabled": false,
+  "skill_auto_install": false
+}
