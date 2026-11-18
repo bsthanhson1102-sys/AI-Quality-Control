@@ -21,3 +21,6 @@ Initial artifact = round 1. Every material re-generation/revision increments by 
 
 ## Artifact examples
 Concept/script/shot list/SRT/edit plan can be delivered without rendering. MP4 is delivered only if actually produced and verified; script acceptance and MP4 acceptance are separate decisions.
+
+## Autonomous internal approval; single user-facing decision (v0.2.1 policy)
+For a user-authorized creative deliverable, the Producer may decide internally on creative direction, script, image selection, typography, editing, audio and technical presets without requesting approval at each step. The AI-QC Judge reviews the actual output, routes concrete findings to Editor, and Final Auditor reviews the corrected artifact. Only deliver the finished candidate to the user with one decision: ACCEPT or REJECT. Do not ask for preference approval on substeps unless essential source rights, irreversible publication, paid credits, patient consent or other legally necessary authorization is missing. Internal role passes are not independent AI agents unless independently executed and evidenced. User acceptance never overrides medical accuracy, rights or mandatory gates. A rendered file that fails QC must be reported as NOT PASS rather than disguised as final. Do not auto-post.
