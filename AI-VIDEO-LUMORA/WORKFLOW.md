@@ -1,18 +1,23 @@
-# Production workflow — AI-VIDEO-LUMORA
+# AI-VIDEO-LUMORA production, repair and improvement workflow — v0.2.0
 
-1. **Intake:** classify Light/Standard/Full, platform, audience, objective, footage availability, duration, ratio, language, brand, privacy/consent, rights and requested deliverable.
-2. **Preflight:** load current Registry, CORE and selected active Skill files; record path, version and SHA if available. Set acceptance criteria.
-3. **Creative discovery:** Producer selects routing. For promotional videos, Content Strategist proposes materially different truthful hooks/angles and Director proposes distinct visual narratives. For footage-only editing, Director may proceed directly without Content Master. The four-expert candidate protocol in CORE applies when appropriate; role-separated passes must not be misrepresented as independent models.
-4. **Creative Judge:** compare candidate concepts against audience fit, originality, evidence, feasibility, production budget and platform fit. Reject unsupported medical claims, deceptive hooks and unlicensed assets.
-5. **Director's package:** one selected concept; timecoded script (proposed timecodes labeled); storyboard; shot list; voiceover/dialogue; on-screen text; asset list; CTA; edit decision list. Clarify missing source footage; do not invent scenes as inspected footage.
-6. **Script gate:** Critic reviews content, safety, factual support, brand, visual feasibility and permissions. Editor revises; Re-check confirms fixes.
-7. **Production:** use available footage/assets. Image Master handles genuinely requested image generation/editing. Video Editor assembles cuts, captions, sound and export **only if supported tools and source material exist**. Otherwise provide an executable edit plan and mark rendering NOT RUN.
-8. **Final rendered-video gate:** inspect actual video/frames and audio where accessible. Check continuity, subtitles/audio synchronization, safe areas, aspect ratio, codec/export and rights. Record unverified checks.
-9. **Release:** apply CORE seven weighted criteria 25/20/15/15/10/10/5; >=90/100, zero unresolved Critical/Major, evidence complete, regression clear, Final Auditor approved, max 4 creation/revision rounds including first. Do not fabricate scores or tests. Deliver only supported artifacts and their honest status.
-10. **Publication:** never auto-post without explicit user approval.
+1. **Intake and criteria:** identify audience, platform, objective, duration, aspect ratio, language, brand, source footage, consent, music/footage rights and exact output. Classify Light/Standard/Full.
+2. **Preflight:** read latest Registry, CORE and selected active Skills; record actual version/blob SHA and SELECTED/LOADED status. Define evidence and technical/domain acceptance criteria.
+3. **Creative proposals:** develop distinct content angles and visual concepts where appropriate; no mandatory secondary Skill when it adds no value. Distinguish proposed from inspected timecodes.
+4. **Creative Judge:** select on relevance, truthfulness, feasibility, safety, originality and platform fit. Single-model perspectives are not independent agents.
+5. **Director package:** structured script, timestamps, storyboard, shot list, VO/captions, asset manifest, rights/consent status, edit decision list and CTA as applicable.
+6. **Pre-production QC:** Critic finds precise defects; Editor fixes; Re-check inspects changes and regressions. Record each revision against one shared round counter.
+7. **Production (conditional):** edit/render only when supported tools, rights and footage are available; otherwise deliver a plan and mark render NOT RUN.
+8. **Post-production QC:** inspect real frames/audio when available; check continuity, subtitle timing, legibility, aspect ratio, audio and export properties.
+9. **Error Discovery:** proactively review pre-production and output evidence; Error Hunter records actionable finding IDs with severity, location/timecode, impact, evidence and reproducible steps. See ERROR-RECOVERY.md.
+10. **Root Cause:** distinguish script, source asset, image generation, timeline, audio, render settings, permission or evidence gap; identify owning component without guessing.
+11. **Targeted Fix:** repair only affected component, preserve known-good behavior; no silent safety/medical-claim changes or invented rights.
+12. **Re-test and Regression:** check original failure, neighboring shots/captions, source-to-output fidelity, domain and technical gates. Missing tools => NOT RUN, never PASS. Stop at four creation/revision rounds including first, or earlier on BLOCKED/PASS.
+13. **Final Auditor:** apply canonical 25/20/15/15/10/10/5, >=90, zero Critical/Major, evidence complete, regression clear, technical/domain acceptance and actual test records. Report PASS / PASS WITH NOTES / NOT PASS / BLOCKED.
+14. **Continuous Improvement:** AFTER audit, analyze recurrence, root causes, effort and impact; propose ranked changes with owner, acceptance criteria and test plan in ROADMAP.md. This stage cannot override a failed release gate. No automatic CORE/Skill modifications.
+15. **Handover and publishing:** deliver actual artifact and QC evidence; never auto-publish without approval.
 
-## Outputs
-Concept brief, script, shot list, storyboard, edit decision list, caption/SRT, asset manifest, and QC record. MP4 is optional and requires a working render runtime plus verification.
+## Shared round counter
+Initial artifact = round 1. Every material re-generation/revision increments by one; pre-production and post-production repair share the same maximum of 4. Pure inspection and proposed roadmap items do not consume a round. No reset by switching role or gate.
 
-## Example
-"AI-VIDEO-LUMORA: create a 20-second vertical TikTok introducing a Lumora clinic service, Vietnamese, no footage supplied, deliver script and shot list." Route video-master primary, content-master secondary; image-master NOT NEEDED unless the brief requests created visual assets. For medical claims use evidence review.
+## Artifact examples
+Concept/script/shot list/SRT/edit plan can be delivered without rendering. MP4 is delivered only if actually produced and verified; script acceptance and MP4 acceptance are separate decisions.
