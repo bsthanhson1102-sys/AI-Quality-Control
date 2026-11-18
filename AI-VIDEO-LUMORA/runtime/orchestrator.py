@@ -1,8 +1,24 @@
 """AI-QC pilot runtime. Deterministic role passes, NOT independent agents."""
-import argparse, hashlib, json, os
+import argparse, hashlib, json, os, subprocess
 from pathlib import Path
 
 MAX_ROUNDS = 4
+
+def inspect_video(path):
+    p = Path(path)
+    if not p.is_file() or p.stat().st_size == 0:
+        return {"ok": False, "reason": "MISSING_VIDEO"}
+    try:
+        probe = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "stream=codec_type,width,height", "-of", "json", str(p)], capture_output=True, text=True, timeout=20)
+    except (FileNotFoundError, subprocess.TimeoutExpired):
+        return {"ok": False, "reason": "FFPROBE_UNAVAILABLE"}
+    if probe.returncode:
+        return {"ok": False, "reason": "INVALID_VIDEO"}
+    stream = next((s for s in json.loads(probe.stdout).get("streams", []) if s.get("codec_type") == "video"), None)
+    if not stream:
+        return {"ok": False, "reason": "NO_VIDEO_STREAM"}
+    return {"ok": True, "width": stream.get("width"), "height": stream.get("height"), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
+
 
 def run(brief, state_dir, capability=None):
     capability = capability or {}
@@ -23,11 +39,14 @@ def run(brief, state_dir, capability=None):
         record("capability", {"realistic_video": False})
         status, findings = "BLOCKED", ["PRODUCTION_CAPABILITY_MISSING"]
     else:
-        record("creator", {"status": "NOT_RUN", "reason": "Production adapter not implemented"})
-        record("critic", {"severity": "Major", "finding": "NO_RENDERED_ARTIFACT"})
-        record("fixer", {"status": "BLOCKED", "root_cause": "Missing production adapter"})
+        candidate = capability.get("candidate_video_path")
+        inspection = inspect_video(candidate) if candidate else {"ok": False, "reason": "NO_RENDERED_ARTIFACT"}
+        record("creator", {"status": "EXTERNAL_CANDIDATE_ONLY" if candidate else "NOT_RUN", "inspection": inspection})
+        finding = "VISUAL_MEDICAL_REVIEW_NOT_RUN" if inspection["ok"] else inspection["reason"]
+        record("critic", {"severity": "Major", "finding": finding})
+        record("fixer", {"status": "NOT_RUN", "root_cause": "No executable production/repair adapter"})
         record("regression", {"status": "NOT_RUN"})
-        status, findings = "NOT_PASS", ["NO_RENDERED_ARTIFACT"]
+        status, findings = "NOT_PASS", [finding]
     record("final_auditor", {"status": status, "qc_score": None, "round_limit": MAX_ROUNDS, "independent_worker_consensus": False})
     result = {"id": key, "status": status, "findings": findings, "rounds_used": 0, "evidence": evidence, "video_created": False}
     tmp = path.with_suffix(".tmp")
