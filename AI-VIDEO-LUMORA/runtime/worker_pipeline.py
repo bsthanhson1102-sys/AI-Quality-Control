@@ -5,6 +5,7 @@ No external publishing, billing, or credential actions are performed here.
 """
 import hashlib
 import json
+import math
 from dataclasses import dataclass
 
 THRESHOLD = 90
@@ -24,7 +25,7 @@ def score_review(review):
     scores = review.get("scores")
     if not isinstance(scores, list) or len(scores) != 7:
         raise ValueError("Seven criterion scores required")
-    if any(isinstance(v, bool) or not isinstance(v, (int, float)) or v < 0 or v > 100 for v in scores):
+    if any(isinstance(v, bool) or not isinstance(v, (int, float)) or not math.isfinite(v) or v < 0 or v > 100 for v in scores):
         raise ValueError("Criterion scores must be numbers in [0, 100]")
     findings = review.get("findings", [])
     if not isinstance(findings, list) or any(not isinstance(f, dict) or f.get("severity") not in ("Critical", "Major", "Minor") for f in findings):
