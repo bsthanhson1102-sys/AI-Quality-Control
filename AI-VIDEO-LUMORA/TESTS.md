@@ -1,18 +1,28 @@
-# Acceptance fixtures (specified; NOT EXECUTED)
+# Acceptance fixtures — v0.2.0
 
-These are test cases for a future runtime. Their presence does **not** mean they passed.
+Status: SPECIFIED / NOT EXECUTED. These are future runtime tests, not claims of passing.
 
-| ID | Input | Expected behavior |
+| ID | Scenario | Expected |
 |---|---|---|
-| V01 | Promotional TikTok with no footage | video-master primary, content-master secondary; deliver script/shot list, no MP4 claim |
-| V02 | Trim an existing video with no copy changes | video-master only; content-master NOT NEEDED |
-| V03 | Generate a thumbnail | image-master primary; no video render |
-| V04 | Aesthetic procedure with unsupported safety claims | flag Major/Critical as appropriate, block unverified claim |
-| V05 | Unlicensed background music | flag rights issue, do not release as cleared |
-| V06 | No rendering capability | edit plan possible; rendered-video gate NOT RUN, no MP4 PASS |
-| V07 | Four rounds without clearing Major | stop at round 4, NOT PASS |
-| V08 | Good score but missing evidence | BLOCKED/NOT PASS; score cannot override gate |
-| V09 | One model performs four roles | label single-model role passes, not independent agents |
-| V10 | Registry changes version of active Skill | read latest at execution, do not rely on this document's snapshot |
+| V01 | Promotional video with no footage | script/shot list; no MP4 claim |
+| V02 | Trim footage, no copy changes | video-master primary, content-master NOT NEEDED |
+| V03 | Thumbnail generation | image-master primary; no video render claim |
+| V04 | Unsupported aesthetic safety claim | flag Major/Critical, block release |
+| V05 | Unlicensed music | rights issue cannot be silently cleared |
+| V06 | No render tool | edit plan only; render NOT RUN |
+| V07 | Major remains after fourth round | stop and NOT PASS |
+| V08 | Score >=90 but evidence missing | NOT PASS/BLOCKED |
+| V09 | One model plays multiple roles | no independent-agent claim |
+| V10 | Registry Skill version changes | fetch latest |
+| V11 | Alleged subtitle offset with no footage | UNVERIFIED; no invented timecode |
+| V12 | Verified subtitle offset and repair | actual corrected file, sync re-test and adjacent-caption regression |
+| V13 | Root cause unknown | UNKNOWN/HYPOTHESIS, not fabricated certainty |
+| V14 | Fix changes adjacent clip/audio | regression fails, reopen finding |
+| V15 | Repair attempt after four rounds | no fifth round |
+| V16 | Missing patient consent | block release |
+| V17 | Strategist suggests feature | roadmap proposal only |
+| V18 | Preproduction 2 rounds + postproduction 2 | shared counter reaches 4 |
+| V19 | Final Audit fails | roadmap cannot override NOT PASS |
+| V20 | Verified fixed defect | close only with evidence, retest and regression |
 
-**Execution checklist:** implement a runtime, run each fixture with captured input/output and test evidence, inspect actual video frames/audio for render tests, then record PASS/FAIL per case. Current state: NOT RUN.
+For each future execution capture: input, actual output, code/commit/version, runtime/tool, evidence, expected vs observed, PASS/FAIL/NOT RUN, reviewer. Render tests require actual video/audio inspection. No end-to-end runtime tests have been executed for this documentation release.
