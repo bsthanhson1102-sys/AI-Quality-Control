@@ -1,21 +1,20 @@
 # AI-VIDEO-LUMORA
-Version: 0.1.0 (workflow package) | Status: DOCUMENTED / RUNTIME NOT DEPLOYED
+Version: 0.2.0 (documented workflow) | Status: DOCUMENTED / RUNTIME NOT DEPLOYED
 
-An independent video-production workflow **inside** AI-Quality-Control. This is not a new Git repository, Git branch, or a fork of Content Master.
+Independent video-production workflow within AI-Quality-Control, sharing canonical active Skills without copying or modifying them.
 
-## Source of truth
-At every substantial task, read current `REGISTRY/skills-registry.yml`, `CORE/quality-control.md`, `CORE/skill-router.md`, and selected active SKILL.md files on main. Never rely on hard-coded versions. Do not activate draft Skills.
-
-**Primary:** `video-master` for video production, storyboard, edit planning and video QC.
-**Conditional secondary:** `content-master` for audience strategy, hooks, dialogue, scripts, marketing; `image-master` for actual visual generation/editing, thumbnails, storyboards. `research-master` only for material factual/medical verification. No automatic three-Skill requirement.
+## Runtime source of truth
+For substantial tasks read the latest main branch: `REGISTRY/skills-registry.yml`, `CORE/quality-control.md`, `CORE/skill-router.md` and applicable active SKILL.md files. No draft Skill auto-activation. Primary video-master for video deliverables; conditional content-master for copy/scripts, image-master for created/edited visual assets, research-master for substantive fact checks.
 
 ## Invocation
-Ask: "AI-VIDEO-LUMORA: [objective], [platform], [duration], [footage/assets], [language], [style], [desired output]". Infer optional details; ask only when essential. Output may be concept/script/shot list/edit plan or finished MP4 **only when actual rendering capability exists and is tested**.
+"AI-VIDEO-LUMORA: [goal], [platform], [duration], [footage], [language], [style], [deliverable]." Infer optional parameters; ask only for essential missing facts.
 
-## Responsibilities
-Producer routes the request; Content Strategist develops message when needed; Director develops visual narrative; Cinematographer plans shots; Image Designer creates/edits required still assets; Editor assembles footage when a supported runtime exists; Sound/Subtitle Specialist handles licensed audio and captions; Critic, Re-check and Final Auditor apply canonical CORE. These are *logical roles*, not claims of separate autonomous agents.
+## End-to-end sequence
+Brief -> Skill routing -> creative candidates -> Judge -> script/storyboard/shot list -> pre-production QC -> production if tools exist -> rendered-output QC -> **Error Hunter -> Root Cause -> targeted Fix -> Re-test and regression** -> Final Auditor -> **Improvement Roadmap**. Findings may trigger repair earlier in the sequence. Maximum four creation/revision rounds total, including the initial artifact; never reset the counter between QC stages.
 
-See [WORKFLOW.md](WORKFLOW.md), [ROUTING.md](ROUTING.md), [QC-GATE.md](QC-GATE.md), [TESTS.md](TESTS.md).
+## Ownership and limits
+Logical roles: Producer, Content Strategist, Director, Cinematographer, Image Designer, Editor, Sound/Subtitle Specialist, Error Hunter, Root Cause Analyst, Fix Owner, Regression Tester, Final Auditor, Development Strategist. These are role-separated passes unless separate workers are actually executed and evidenced.
 
-## Deployment limits
-This commit packages a reusable **procedure** only. It does not install Windows agents, connect ChatGPT/Codex to local programs, create a rendering engine, or prove automated MP4 export. Any external publishing or GitHub modifications require explicit approval.
+See [WORKFLOW.md](WORKFLOW.md), [ROUTING.md](ROUTING.md), [ERROR-RECOVERY.md](ERROR-RECOVERY.md), [QC-GATE.md](QC-GATE.md), [ROADMAP.md](ROADMAP.md), [TESTS.md](TESTS.md).
+
+**No runtime, automated MP4 export, actual independent agents or publishing is deployed by this documentation update.** Never claim render/playback PASS without inspected output. Never auto-publish or mutate canonical CORE/Skills without explicit scope approval.
