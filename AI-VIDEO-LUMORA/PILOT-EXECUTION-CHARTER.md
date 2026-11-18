@@ -10,7 +10,7 @@ Status: AUTHORIZED FOR PROJECT-SCOPED IMPLEMENTATION; NOT A RUNNING AUTONOMOUS S
 - No unattended execution between chat sessions unless a separately configured and verified scheduler/runtime actually exists.
 
 ## Delivery target
-Deliver a pilot for owner review only when >=80% of the **weighted pilot acceptance checklist** below has been demonstrably verified. 80% is a project maturity milestone, NOT a video release PASS. Product release remains governed by canonical CORE: >=90/100, no Critical/Major, sufficient evidence, max four creation/revision rounds.
+Deliver a pilot for owner review only when strictly >80% of the **weighted pilot acceptance checklist** below has been demonstrably verified. Strictly above 80% is a project progress checkpoint for owner review and a decision on completing the final stage, NOT project completion, NOT a video release PASS, and NOT a relaxation of any QC threshold. Product release remains governed by canonical CORE: >=90/100, no Critical/Major, sufficient evidence, max four creation/revision rounds.
 
 ## Pilot acceptance checklist (100 points)
 1. Repository skill routing, current version provenance and traceable execution logs (10).
@@ -32,7 +32,7 @@ A. Inventory runtime and available zero-cost production tools, permissions and l
 B. Build the smallest runnable orchestrator, tool adapters and evidence ledger.
 C. Execute unit/integration/regression fixtures, preserving exact commands and output hashes.
 D. Run one Lumora filler-temple video case, label synthetic media, verify medical/consent claims, and inspect real frames/audio.
-E. Independent final audit of milestone checklist; only then present the pilot for owner decision.
+E. Independent final audit of milestone checklist; only after progress exceeds 80% present the pilot for owner review and a decision on final-stage work; retain CORE >=90/100 independently for each product release.
 
 ## Stop and escalation
 Stop or mark BLOCKED when production is infeasible, permissions/evidence are missing, cost is required, or an unsafe medical claim persists. Never substitute motion graphics for requested realistic footage and call it a cinematic video. No claims of multi-agent independence without independently executed worker evidence.
