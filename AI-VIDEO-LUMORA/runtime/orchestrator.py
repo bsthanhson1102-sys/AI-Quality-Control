@@ -5,6 +5,8 @@ from pathlib import Path
 MAX_ROUNDS = 4
 
 def inspect_video(path):
+    if not isinstance(path, (str, os.PathLike)) or not str(path):
+        return {"ok": False, "reason": "INVALID_VIDEO_PATH"}
     p = Path(path)
     if not p.is_file() or p.stat().st_size == 0:
         return {"ok": False, "reason": "MISSING_VIDEO"}
@@ -14,7 +16,11 @@ def inspect_video(path):
         return {"ok": False, "reason": "FFPROBE_UNAVAILABLE"}
     if probe.returncode:
         return {"ok": False, "reason": "INVALID_VIDEO"}
-    stream = next((s for s in json.loads(probe.stdout).get("streams", []) if s.get("codec_type") == "video"), None)
+    try:
+        streams = json.loads(probe.stdout).get("streams", [])
+    except (ValueError, AttributeError):
+        return {"ok": False, "reason": "INVALID_PROBE_OUTPUT"}
+    stream = next((s for s in streams if s.get("codec_type") == "video"), None)
     if not stream:
         return {"ok": False, "reason": "NO_VIDEO_STREAM"}
     return {"ok": True, "width": stream.get("width"), "height": stream.get("height"), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
